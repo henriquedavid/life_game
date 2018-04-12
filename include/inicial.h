@@ -1,51 +1,55 @@
-#include <iostream>
+#include "readFile.h"
 
-bool openConfiguration(){
-	ifstream iFile;
-	iFile.open("../data/cfg1.dat");
-
-	if(iFile != null)
-		return true;
-	else
-		return false;
-}
-
-void initial(){
+/// Inicialização do sistema
+void initial( Life &ls, palavra nameFile ){
 	
 	std::cout << ">>> Trying to open input file [data/cfg1.dat]... ";
 
-	//Life life_;
-	bool abertura = openConfiguration();
+	arq_entrada iFile;
 
-	if( !abertura ){
+	/// Abre o arquivo.
+	iFile.open("../data/cfg1.dat");
+
+	/// Verifica se o arquivo foi aberto.
+	if( !iFile.is_open() ){
+
 		std::cout << "error!\nTry again!" << std::endl;
-		break;
+		return;
 
 	} else{
 
 		std::cout << "done!" << std::endl;
 
 		std::cout << ">>> Processing data, please wait..." << std::endl;
-		//Life life_ = openData(Life lif);
+		
+		/// Lê e configura a classe Life para ficar como no arquivo configuração.
+		readConfig(ls, iFile);
 
-		//std::cout << ">>> Grid size read from input file: " << <life_.xgrid> << " rows by " << <life_.ygrid> << " cols." << std::endl;
-		//std::cout << ">>> Character that represents a living cell read from input file: '" << <life_.character> << "'" << std::endl;
 
-		std::cout << setw(40) << setfill('*') << " " << std::endl;
-		/*std::cout << "Welcome to Conways game of Life.\n" 
+		std::cout << ">>> Grid size read from input file: " << ls.get_rows() << " rows by " << ls.get_columns() << " cols." << std::endl;
+		std::cout << ">>> Character that represents a living cell read from input file: '" << ls.get_caractere() << "'\n" << std::endl;
+
+		/// Breve descrição sobre o jogo
+		std::cout << std::setw(80) << std::setfill('*') << " " << std::endl;
+		std::cout << "Welcome to Conways game of Life.\n" 
 					  << "By default this game uses a grid of size 20 by 60 in which\n"
 					  << "each cell can either be occupied by an organism or not.\n"
 					  << "The occupied cells change from generation to generation\n"
 					  << "according to the number of neighboring cells which are alive." << std::endl;
-		*/std::cout << setw(40) << setfill('*') << std::endl;
+		std::cout << std::setw(80) << std::setfill('*') << " " << std::endl;
 
 	}
+
+	/// Fecha o arquivo.
+	iFile.close();
 
 }
 
 int main(){
 
-	initial();
+	Life lf( 20, 60, '-');
+
+	initial(lf, "TESTE");
 
 	return 0;
 }
