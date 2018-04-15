@@ -1,6 +1,7 @@
 #include "readFile.h"
 
 /// Inicialização do sistema
+/*
 void initial( Life &ls, palavra nameFile ){
 	
 	std::cout << ">>> Trying to open input file [data/cfg1.dat]... ";
@@ -44,7 +45,6 @@ void initial( Life &ls, palavra nameFile ){
 	iFile.close();
 
 }
-
 int main(){
 
 	Life lf( 20, 60, '-');
@@ -53,3 +53,4 @@ int main(){
 
 	return 0;
 }
+*/

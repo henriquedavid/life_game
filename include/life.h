@@ -11,19 +11,22 @@ enum Cell{
 
 class Life {
 	private:
-		std::vector<std::vector<int>> grid;
+		std::vector<std::vector<Cell>> grid;
 		int rows;
 		int cols;
-		//TODO: identidade da grade
+        std::vector<int> id; // identity Vector - Formart [#n, start_x, start_y, distance_1, distance_2, ... , distance_n]
 	public:
 	/// construtor
 	Life(int nLin, int nCol);
-	Life::~Life();
-	///destructor
+    ///destructor
+	~Life();
 	/// sobrecarga do operador =
 	Life & operator=(const Life& lf);
-	bool operator==(const Life& lf) const; 
-	//set_alive();	//update();
+    /// sobrecarga do operador ==
+	bool operator==(const Life& lf) const;
+	//set_alive();	
+    //update();
+    void set_id();
 	/// imprimi a grade
 	void print();
 	//stable();
