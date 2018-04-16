@@ -8,7 +8,7 @@
 
 using palavra = std::string;
 using arq_entrada = std::ifstream;
-
+using arq_saida = std::ofstream;
 #include "../include/life.h"
 #include "../include/warehouse.h"
 #include "../include/readFile.h"
@@ -21,9 +21,9 @@ using arq_entrada = std::ifstream;
 int main( int argc, char * argv[] ){
 	
 	std::string arquivo;
-
+    std::string arquivo_saida;
 	/// Verifica se quantidade de argumentos.
-	if(argc != 2){
+	if(argc < 2){
 		std::cout << "Wrong syntaxe!\n"
 				  << "Use: life <input_cfg_file> [<output_cfg_evolution_file>]" << std::endl;
 		return 0;
@@ -31,7 +31,10 @@ int main( int argc, char * argv[] ){
 
 	/// O segundo argumento é arquivo.
 	arquivo = argv[1];
-
+    if(argc == 3)
+    {
+        arquivo_saida = argv[2];
+    }
 	/// Inicializa o objeto com a configuração padrão.
  	Life lf(20, 60, '-');
  	Warehouse ware;	
@@ -47,6 +50,7 @@ int main( int argc, char * argv[] ){
 		//verifica_estavel();
 		//verifica_extinta();
 	}
-
+	if(argc == 3)
+        save_file(ware, arquivo_saida);
 	return 0;
 }

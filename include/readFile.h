@@ -1,3 +1,4 @@
+#include <iomanip>
 /// Configura a classe Life pelo arquivo configuração.
 /// \param Classe Life
 /// \param Arquivo de configuração.
@@ -48,7 +49,35 @@ void readConfig(Life &lf, arq_entrada &arquivo){
 	}
 	
 }
-
+// Life get_life( int posicao );
+// int get_size();
+void save_file(Warehouse ware, std::string arquivo_saida)
+{
+    arq_saida arquivo;
+    arquivo.open("../"+arquivo_saida);
+    if( !arquivo.is_open() ){
+		std::cout << "error!\nTry again!\n" << std::endl;
+		return;
+    }
+    Life lf = ware.get_life(0);
+    char c = lf.get_caractere();
+    arquivo << lf.get_rows() << " " << lf.get_columns() << std::endl << c << std::endl;
+    int size = ware.get_size();
+    for(int k = 0; k < size; k++){
+        lf = ware.get_life(k);
+        for( auto i(1) ; i < lf.get_rows()+1 ; i++ ){
+            for( auto j(1) ; j < lf.get_columns() +1 ; j++){
+                if(lf.get_value(i, j) == CELL_ALIVE)
+                    arquivo << c;
+                else
+                    arquivo << '.';
+            }
+            arquivo << std::endl;
+        }
+        arquivo << std::setw(lf.get_columns()+1) << std::setfill('-') << '\n';
+    }
+    arquivo.close();
+}
 /// Verifica se o usuário ainda deseja gerar mais células.
 bool print_continue(Life lf, Warehouse &wh, int value = 0){
 	char answer;

@@ -54,5 +54,6 @@ class Life {
 	void set_caractere(char carac);
 	bool is_extinct();
     void set_id();
+    void save_file(std::string filename);
 };
 #endif
