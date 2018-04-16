@@ -37,6 +37,28 @@ class Life {
 	// sobrecarga de operadores
 	// Métodos de recuperação de valores
 	/// Retorna a quantidade de linhas da matriz
+
+	/// Adiciona as células no vetor.
+	/// \param vetor representando as linhas.
+	void add_data_vector(std::vector<int> vetor){
+		grid.push_back(vetor);
+	}
+
+	/// Imprime para o usuário como está a organização das células.
+	void print_data_vector(int numero_geracao = 1){
+		std::cout << "Showing generation " << numero_geracao << ":\n";
+		for( auto i(0) ; i < this->rows ; i++ ){
+			std::cout << "[ ";
+			for( auto j(0) ; j < this->cols ; j++ ){
+				if( grid[i][j] == 1)
+					std::cout << this->characte;
+				else
+					std::cout << " ";
+			}
+			std::cout << "]" <<std::endl;
+		}
+	}
+
 	int get_rows(){
 		return this->rows;
 	}
