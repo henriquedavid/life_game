@@ -3,12 +3,17 @@
 #include <cstring>
 #include <iomanip>
 #include <string>
+#include <iterator>
 
 using palavra = std::string;
 using arq_entrada = std::ifstream;
 
 #include "../include/life.h"
+#include "../include/readFile.h"
+
 #include "../include/inicial.h"
+
+//#include <istream>
 
 int main( int argc, char * argv[] ){
 	
@@ -29,6 +34,13 @@ int main( int argc, char * argv[] ){
 
  	/// Chama o processo de leitura e inicio do life.	
  	initial(lf, arquivo);
+
+	lf.print_data_vector();
+
+	while( print_continue() ){
+		//generate();
+		lf.print_data_vector();
+	}
 
 	return 0;
 }
