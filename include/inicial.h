@@ -44,12 +44,3 @@ void initial( Life &ls, palavra nameFile ){
 	iFile.close();
 
 }
-
-int main(){
-
-	Life lf( 20, 60, '-');
-
-	initial(lf, "TESTE");
-
-	return 0;
-}

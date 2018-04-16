@@ -14,11 +14,17 @@ class Life {
 		std::vector<std::vector<int>> grid;
 		int rows;
 		int cols;
+		char characte;
 		//TODO: identidade da grade
 	public:
 	/// construtor
 	Life(int nLin, int nCol);
-	Life::~Life();
+	Life(int nLin, int nCol, char caract){
+		this->rows = nLin;
+		this->cols = nCol;
+		this->characte = caract;
+	}
+	//~Life();
 	///destructor
 	/// sobrecarga do operador =
 	Life & operator=(const Life& lf);
@@ -37,6 +43,22 @@ class Life {
 	/// Retorna a quantidade de colunas da matriz
 	int get_columns(){
 		return this->cols;
+	}
+
+	void set_rows(int row){
+		this->rows = row;
+	}
+
+	void set_columns(int column){
+		this->cols = column;
+	}
+
+	char get_caractere(){
+		return this->characte;
+	}
+
+	void set_caractere(char carac){
+		this->characte = carac;
 	}
 };
 #endif
