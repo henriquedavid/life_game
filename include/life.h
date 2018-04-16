@@ -15,7 +15,7 @@ class Life {
 		int rows;
 		int cols;
 		char characte;
-		//TODO: identidade da grade
+        std::vector<int> id;
 	public:
 	/// construtor
 	Life(int nLin, int nCol);
@@ -24,14 +24,13 @@ class Life {
 		this->cols = nCol;
 		this->characte = caract;
 	}
-	//~Life();
+	~Life();
 	///destructor
 	/// sobrecarga do operador =
 	Life & operator=(const Life& lf);
 	bool operator==(const Life& lf) const; 
 	//set_alive();	//update();
 	/// imprimi a grade
-	void print();
 	//stable();
 	//extinct
 	// sobrecarga de operadores
@@ -40,55 +39,20 @@ class Life {
 
 	/// Adiciona as células no vetor.
 	/// \param vetor representando as linhas.
-	void add_data_vector(std::vector<int> vetor){
-		grid.push_back(vetor);
-	}
+	void add_data_vector(std::vector<int> vetor);
 
 	/// Imprime para o usuário como está a organização das células.
-	void print_data_vector(int numero_geracao = 1){
-		std::cout << "Showing generation " << numero_geracao << ":\n";
-		for( auto i(1) ; i < this->rows+1 ; i++ ){
-			std::cout << "[ ";
-			for( auto j(1) ; j < this->cols+1 ; j++ ){
-				if( grid[i][j] == 1)
-					std::cout << this->characte;
-				else
-					std::cout << " ";
-			}
-			std::cout << "]" <<std::endl;
-		}
-	}
-
-	int get_value( int x, int y ){
-		return this->grid[x][y];
-	}
-
-	void set_value( int x, int y, int value ){
-		this->grid[x][y] = value;
-	}
-
-	int get_rows(){
-		return this->rows;
-	}
+	void print_data_vector(int numero_geracao = 1);
+	int get_value( int x, int y );
+	void set_value( int x, int y, int value );
+	int get_rows();
 	/// Retorna a quantidade de colunas da matriz
-	int get_columns(){
-		return this->cols;
-	}
-
-	void set_rows(int row){
-		this->rows = row;
-	}
-
-	void set_columns(int column){
-		this->cols = column;
-	}
-
-	char get_caractere(){
-		return this->characte;
-	}
-
-	void set_caractere(char carac){
-		this->characte = carac;
-	}
+	int get_columns();
+	void set_rows(int row);
+	void set_columns(int column);
+	char get_caractere();
+	void set_caractere(char carac);
+	bool is_extinct();
+    void set_id();
 };
 #endif

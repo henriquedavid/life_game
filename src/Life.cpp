@@ -1,5 +1,4 @@
 #include "life.h"
-
 Life::Life(int nLin = 20, int nCol = 60)
 {
 	this->rows = nLin;
@@ -100,6 +99,66 @@ void Life::set_id()
 	}
 	this->id[0] = n;
 }
+
+void Life::add_data_vector(std::vector<int> vetor){
+    grid.push_back(vetor);
+}
+
+/// Imprime para o usuário como está a organização das células.
+void Life::print_data_vector(int numero_geracao){
+    std::cout << "Showing generation " << numero_geracao << ":\n";
+    for( auto i(1) ; i < this->rows+1 ; i++ ){
+        std::cout << "[ ";
+        for( auto j(1) ; j < this->cols+1 ; j++ ){
+            if( grid[i][j] == 1)
+                std::cout << this->characte;
+            else
+                std::cout << " ";
+        }
+        std::cout << "]" <<std::endl;
+    }
+}
+
+int Life::get_value( int x, int y ){
+    return this->grid[x][y];
+}
+
+void Life::set_value( int x, int y, int value ){
+    this->grid[x][y] = value;
+}
+
+int Life::get_rows(){
+    return this->rows;
+}
+/// Retorna a quantidade de colunas da matriz
+int Life::get_columns(){
+    return this->cols;
+}
+
+void Life::set_rows(int row){
+    this->rows = row;
+}
+
+void Life::set_columns(int column){
+    this->cols = column;
+}
+
+char Life::get_caractere(){
+    return this->characte;
+}
+
+void Life::set_caractere(char carac){
+    this->characte = carac;
+}
+
+bool Life::is_extinct(){
+    if(this->id[0] == 0)
+        return true;
+    return false;
+}
+
+
+
 
 
 
