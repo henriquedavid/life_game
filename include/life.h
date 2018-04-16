@@ -59,6 +59,14 @@ class Life {
 		}
 	}
 
+	int get_value( int x, int y ){
+		return this->grid[x][y];
+	}
+
+	void set_value( int x, int y, int value ){
+		this->grid[x][y] = value;
+	}
+
 	int get_rows(){
 		return this->rows;
 	}

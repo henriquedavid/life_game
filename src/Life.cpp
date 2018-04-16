@@ -23,6 +23,7 @@ Life::~Life()
 }
 //set_alive();
 //update();
+/*
 void Life::print(){
 	for(int i = 0; i < this->rows; ++i)
     {
@@ -35,7 +36,7 @@ void Life::print(){
 		}
 		std::cout << std::endl;
 	}
-}
+}*/
 //stable();
 //extinct();
 Life & Life::operator=(const Life& lf) 
