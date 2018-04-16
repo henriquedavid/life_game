@@ -10,6 +10,7 @@ using arq_entrada = std::ifstream;
 
 #include "../include/life.h"
 #include "../include/readFile.h"
+#include "../include/extension.h"
 
 #include "../include/inicial.h"
 
@@ -38,7 +39,7 @@ int main( int argc, char * argv[] ){
 	lf.print_data_vector();
 
 	while( print_continue() ){
-		//update();
+		update(lf);
 		lf.print_data_vector();
 		//verifica_estavel();
 		//verifica_extinta();
