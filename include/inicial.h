@@ -1,4 +1,3 @@
-#include "readFile.h"
 
 /// Inicialização do sistema
 void initial( Life &ls, palavra nameFile ){
@@ -8,23 +7,22 @@ void initial( Life &ls, palavra nameFile ){
 	arq_entrada iFile;
 
 	/// Abre o arquivo.
-	iFile.open("../data/cfg1.dat");
+	iFile.open("../"+nameFile);
 
 	/// Verifica se o arquivo foi aberto.
 	if( !iFile.is_open() ){
 
-		std::cout << "error!\nTry again!" << std::endl;
+		std::cout << "error!\nTry again!\n" << std::endl;
 		return;
 
 	} else{
 
-		std::cout << "done!" << std::endl;
+		std::cout << "done!\n" << std::endl;
 
 		std::cout << ">>> Processing data, please wait..." << std::endl;
 		
 		/// Lê e configura a classe Life para ficar como no arquivo configuração.
 		readConfig(ls, iFile);
-
 
 		std::cout << ">>> Grid size read from input file: " << ls.get_rows() << " rows by " << ls.get_columns() << " cols." << std::endl;
 		std::cout << ">>> Character that represents a living cell read from input file: '" << ls.get_caractere() << "'\n" << std::endl;
@@ -37,6 +35,8 @@ void initial( Life &ls, palavra nameFile ){
 					  << "The occupied cells change from generation to generation\n"
 					  << "according to the number of neighboring cells which are alive." << std::endl;
 		std::cout << std::setw(80) << std::setfill('*') << " " << std::endl;
+		std::cout << std::endl;
+
 
 	}
 
