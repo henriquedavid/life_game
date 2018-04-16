@@ -34,11 +34,15 @@ void readConfig(Life &lf, arq_entrada &arquivo){
 	}
 
 	int ax = 0;
-	for( auto i(0) ; i < ro ; i++ ){
+	for( auto i(0) ; i < (ro+2) ; i++ ){
 		std::vector<int> v;
-		for(auto j(0) ; j < col ; j++ ){
-			v.push_back(valores[ax]);
-			ax++;
+		for(auto j(0) ; j < (col+2) ; j++ ){
+			if(i < 1 || i > ro || j < 1 || j > col)
+				v.push_back(0);
+			else{
+				v.push_back(valores[ax]);
+				ax++;
+			}
 		}
 		lf.add_data_vector(v);
 	}

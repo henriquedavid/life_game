@@ -47,9 +47,9 @@ class Life {
 	/// Imprime para o usuário como está a organização das células.
 	void print_data_vector(int numero_geracao = 1){
 		std::cout << "Showing generation " << numero_geracao << ":\n";
-		for( auto i(0) ; i < this->rows ; i++ ){
+		for( auto i(1) ; i < this->rows+1 ; i++ ){
 			std::cout << "[ ";
-			for( auto j(0) ; j < this->cols ; j++ ){
+			for( auto j(1) ; j < this->cols+1 ; j++ ){
 				if( grid[i][j] == 1)
 					std::cout << this->characte;
 				else
