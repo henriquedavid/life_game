@@ -38,8 +38,10 @@ int main( int argc, char * argv[] ){
 	lf.print_data_vector();
 
 	while( print_continue() ){
-		//generate();
+		//update();
 		lf.print_data_vector();
+		//verifica_estavel();
+		//verifica_extinta();
 	}
 
 	return 0;
