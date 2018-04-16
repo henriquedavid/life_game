@@ -50,8 +50,11 @@ void readConfig(Life &lf, arq_entrada &arquivo){
 }
 
 /// Verifica se o usuário ainda deseja gerar mais células.
-bool print_continue(){
+bool print_continue(Life lf, Warehouse &wh, int value = 0){
 	char answer;
+
+	if( value == 0)
+		wh.add_life( lf );
 
 	/// Recebe a reposta do usuário.
 	std::cout << "Continue viewing new generations?\n(y,n)? ";
@@ -67,7 +70,7 @@ bool print_continue(){
 	else{
 		/// Verifica se a resposta é válida.
 		std::cout << "Sorry, we didn't understand!\n" << std::endl;
-		print_continue();
+		print_continue(lf, wh, 1);
 	}
 
 	return true;

@@ -5,9 +5,8 @@ void update( Life &lf , Warehouse &wh){
 	int tamanho = wh.get_size();
 	tamanho--;
 
-	auto last_Life(wh.get_life(tamanho));
+	Life last_lf = wh.get_life(tamanho);
 
-	last_Life last_lf;
 
 	/// Aplica a Regra 1.
 	for( auto i(1); i < lf.get_rows()+1 ; i++ ){
