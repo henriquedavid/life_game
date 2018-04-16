@@ -34,7 +34,7 @@ int main( int argc, char * argv[] ){
 
 	/// Inicializa o objeto com a configuração padrão.
  	Life lf(20, 60, '-');
- 	Warehouse ware;
+ 	Warehouse ware;	
 
  	/// Chama o processo de leitura e inicio do life.	
  	initial(lf, arquivo);
@@ -43,7 +43,7 @@ int main( int argc, char * argv[] ){
 
 	while( print_continue(lf, ware) ){
 		update(lf, ware);
-		lf.print_data_vector();
+		lf.print_data_vector(ware.get_size()+1);
 		//verifica_estavel();
 		//verifica_extinta();
 	}
