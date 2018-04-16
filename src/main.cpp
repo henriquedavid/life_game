@@ -20,9 +20,11 @@ int main( int argc, char * argv[] ){
 		return 0;
 	}
 
+	arquivo = argv[1];
+
 
  	Life lf(20, 60, '-');
- 	initial(lf, "TESTE");
+ 	initial(lf, arquivo);
 
 	return 0;
 }
