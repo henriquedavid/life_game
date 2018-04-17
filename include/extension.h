@@ -39,5 +39,5 @@ void update( Life &lf , Warehouse &wh){
 			}
 		}
 	}
-
+	lf.set_id();
 }

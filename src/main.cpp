@@ -48,7 +48,11 @@ int main( int argc, char * argv[] ){
 		update(lf, ware);
 		lf.print_data_vector(ware.get_size()+1);
 		//verifica_estavel();
-		//verifica_extinta();
+        
+		if(lf.is_extinct()){
+           std::cout << ">>> All Cells are extinct. Exiting...\n";
+           return 0;
+        }
 	}
 	if(argc == 3)
         save_file(ware, arquivo_saida);
