@@ -8,10 +8,8 @@ Life::Life(std::string filename)
 {
     std::ifstream file;
     file.open(filename);
-    if(!file.is_open()){
-        init(20, 60);
-        return;
-    }
+    if(file.fail())
+        exit(1);
     int rows, cols;
     char ca, cr; // char: active and char: read
     file >> rows >> cols >> ca;
@@ -59,9 +57,9 @@ Life & Life::operator=(const Life& lf)
 }
 bool Life::operator==(std::vector<int> id) const 
 {
-    int n = this->id[0];                // number of elements: number of distances + 1 + start_x + start_y + distance_1 + ... + distance_n
-    for(int i = 0; i < n+3; ++i){         // if the sizes are different the loop will break at first time
-        if(this->id[i] != id[i]) // different data
+    int n = this->id[0];                // number of elements: number of elements distance_1 + ... + distance_n
+    for(int i = 0; i < n+1; ++i){       // if the sizes are different the loop will break at first time
+        if(this->id[i] != id[i])        // different data
             return false;
     }
     return true;
@@ -91,6 +89,8 @@ void Life::set_id()
 }
 void Life::update()
 {
+    if(!this->board->is_disable())
+        return;
     this->set_id();
     this->ids.push_back(this->id);
     Life lf = *this;
@@ -179,6 +179,7 @@ void Life::load_from_board()
 
 void Life::clear_ids()
 {
+    this->id.clear();
     this->ids.clear();
 }
 
@@ -187,40 +188,40 @@ void Life::bordas()
 {
 	///Trata as diagonais.
 	if( this->grid[0][0] == 1 )
-		this->grid[rows-2][cols-2] = 1;
+        set_value(rows-2, cols-2, 1);
     
 	if( this->grid[rows-1][cols-1] == 1 )
-		this->grid[1][1] = 1;
+		set_value(1, 1, 1);
 
 	if( this->grid[rows-1][0] == 1 )
-		this->grid[1][cols-2] = 1;
+		set_value(1, cols-2, 1);
 
 	if( this->grid[0][cols-1] == 1)
-		this->grid[rows-2][1] = 1;
+		set_value(rows-2, 1, 1);
 
-	///  Trata os casos em que células passam a bordar.
+	///  Trata os casos em que células passam a borda.
 	for(auto i(0); i < rows ; i++)
     {
 		if(i == 0)
 			for(auto j(1) ; j < cols-2; j++)
 				if( this->grid[i][j] == 1 )
-					this->grid[rows-2][j] = 1;
+					set_value(rows-2, j, 1);;
 
 		if( i == rows-1)
 			for(auto j(1) ; j < cols-2; j++)
 				if( this->grid[i][j] == 1 )
-					this->grid[rows-2][j] = 1;
+					set_value(rows-2, j, 1);
 	}
 
 	for(auto i(1); i < rows-2 ; i++){
 		for(auto j(0) ; j < cols-1; j++){
 			if( j == 0 )
 				if( this->grid[i][j] == 1 )
-					this->grid[i][cols-2] = 1;
+					set_value(i, cols-2, 1);
 
 			if( j == cols-1 )
 				if( this->grid[i][j] == 1 )
-					this->grid[i][1] = 1;
+					set_value(i, 1, 1);
 			
 		}
 	}
