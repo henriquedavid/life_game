@@ -1,8 +1,11 @@
-#ifndef LIFE_H
-#define LIFE_H
+//#ifndef LIFE_H
+//#define LIFE_H
 
 #include <iostream>
 #include <vector>
+#include <string>
+
+using palavra = std::string;
 
 /// Definição para quando uma célula estiver viva e/ou morta.
 enum Cell{
@@ -93,10 +96,10 @@ class Life {
     
     /// Salva os dados de cada geração em um arquivo de saída.
     /// \param nome do arquivo de saída desejado.
-    void save_file(std::string filename);
+    void save_file(palavra filename);
     
     /// Realiza transformações para que a célula "continue" em outras bordas.
     void bordas();
 
 };
-#endif
+//#endif

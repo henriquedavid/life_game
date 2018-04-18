@@ -57,30 +57,55 @@ void readConfig(Life &lf, arq_entrada &arquivo){
 /// Gera e armazena as gerações em um arquivo de saída.
 /// \param classe contendo todas as gerações.
 /// \param nome do arquivo de saída especificado pelo usuário.
-void save_file(Warehouse ware, std::string arquivo_saida)
+void save_file(Warehouse ware, palavra arquivo_saida)
 {
     arq_saida arquivo;
-    arquivo.open("../"+arquivo_saida);
+
+    /// Abre o arquivo de saída.
+    arquivo.open("../data/"+arquivo_saida);
+
+    /// Verifica se não ocorreu nenhum erro.
     if( !arquivo.is_open() ){
-		std::cout << "error!\nTry again!\n" << std::endl;
+		std::cout << "Error!\nTry again!\n" << std::endl;
 		return;
     }
+
+    // Obtém a geração de uma classe Life
     Life lf = ware.get_life(0);
+    /// Recebe o caractere da clase Life.
     char c = lf.get_caractere();
-    arquivo << lf.get_rows() << " " << lf.get_columns() << std::endl << c << std::endl;
+
+    /// Imprime no arquivo gerado quantidade de linhas e colunas e o caractere da confguração inicial.
+    arquivo << "Initial Configuration:" << std::endl;
+    arquivo << lf.get_rows() << " " << lf.get_columns() << std::endl << c << "\n" << std::endl;
+    arquivo << std::endl;
+
+    /// Obtém o tamanho do vetor que armazena as gerações.
     int size = ware.get_size();
+
+    /// Imprime as configurações.
     for(int k = 0; k < size; k++){
+
+    	/// Obtém cada célula.
         lf = ware.get_life(k);
-        for( auto i(1) ; i < lf.get_rows()+1 ; i++ ){
-            for( auto j(1) ; j < lf.get_columns() +1 ; j++){
+
+        arquivo << "Showing generation " << k << ":" << std::endl;
+
+        /// Imprime a configuração em uma determinada célula.
+        for( auto i(1) ; i < lf.get_rows() ; i++ ){
+            for( auto j(1) ; j < lf.get_columns() ; j++){
+
+
+            	/// Verifica se ela está viva ou morta.
                 if(lf.get_value(i, j) == CELL_ALIVE)
                     arquivo << c;
                 else
                     arquivo << '.';
+
             }
             arquivo << std::endl;
         }
-        arquivo << std::setw(lf.get_columns()+1) << std::setfill('-') << '\n';
+        arquivo << std::endl << std::endl;
     }
     arquivo.close();
 }

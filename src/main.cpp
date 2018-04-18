@@ -21,8 +21,9 @@ using arq_saida = std::ofstream;
 
 int main( int argc, char * argv[] ){
 
-	std::string arquivo;
-	std::string arquivo_saida;
+	palavra arquivo;		// arquivo de entrada.
+	palavra arquivo_saida;
+
 	/// Verifica se quantidade de argumentos.
 	if(argc < 2){
 		std::cout << "Wrong syntaxe!\n"
@@ -38,6 +39,7 @@ int main( int argc, char * argv[] ){
 	{
 		arquivo_saida = argv[2];
 	}
+
 	/// Inicializa o objeto com a configuração padrão.
 	Life lf(20, 60, '-');
 	Warehouse ware;	
