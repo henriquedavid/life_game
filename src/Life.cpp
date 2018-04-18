@@ -1,4 +1,8 @@
 #include "../include/life.h"
+
+/// Construtor da classe Life.
+/// \param numeros de linhas, padrão é 20 linhas caso o usuário não informe
+/// \param numeros de colunas, padrão é 60 colunas caso o usuário não informe
 Life::Life(int nLin = 20, int nCol = 60)
 {
 	this->rows = nLin;
@@ -15,6 +19,7 @@ Life::Life(int nLin = 20, int nCol = 60)
 
 }
 
+/// Desconstrutor da classe Life.
 Life::~Life()
 {
 	this->grid.resize(0);
@@ -22,6 +27,8 @@ Life::~Life()
 		this->grid[i].resize(0);
 }
 
+/// Operador de atribuição da classe Life.
+/// \param Classe Life.
 Life & Life::operator=(const Life& lf) 
 {
 	this->rows = lf.rows;					    // !
@@ -40,7 +47,8 @@ Life & Life::operator=(const Life& lf)
 	// TODO: traduzir comentarios
 }
 
-
+/// Operador de igualdade da classe life.
+/// \param Classe Life.
 bool Life::operator==(const Life& lf) const 
 {
 	int n = this->id[0];            // number of elements: number of distances + start_x + start_y + distance_1 + ... + distance_n
@@ -87,6 +95,7 @@ void Life::set_id()
 	this->id[0] = n;
 }
 
+/// Adiciona dados ao vetor da classe Grid na classe Life.
 void Life::add_data_vector(std::vector<int> vetor){
 	grid.push_back(vetor);
 }
@@ -106,38 +115,59 @@ void Life::print_data_vector(int numero_geracao){
 	}
 }
 
+/// Retorna o valor em uma determinada posição em [linha] e [coluna].
+/// \param número da linha.
+/// \param número da coluna.
+/// \return valor na posição informada.
 int Life::get_value( int x, int y ){
 	return this->grid[x][y];
 }
 
+/// Modificar valor em uma determinada posição.
+/// \param número da linha
+/// \param número da coluna
+/// \param valor desejado que seja inserido na posição informada.
 void Life::set_value( int x, int y, int value ){
 	this->grid[x][y] = value;
 }
 
+/// Obter o número de linhas.
+/// \return retornar o número de linhas na classe Life.
 int Life::get_rows(){
 	return this->rows;
 }
-/// Retorna a quantidade de colunas da matriz
+/// Retorna a quantidade de colunas da classe Life.
+/// \return retornar o número de colunas da classe.
 int Life::get_columns(){
 	return this->cols;
 }
 
+/// Modificar a quantidade de linhas na classe (antes de gerar o vetor)
+/// \param quantidade de linhas desejadas.
 void Life::set_rows(int row){
 	this->rows = row;
 }
 
+/// Modificar a quantidade de colunas na classe.
+/// \param quantidade de colunas.
 void Life::set_columns(int column){
 	this->cols = column;
 }
 
+/// Obter qual foi o caractere utilizado pelo usuário no arquivo configuração.
+/// \return valor de char na classe para identificar uma célula viva.
 char Life::get_caractere(){
 	return this->characte;
 }
 
+/// Modificar o caractere.
+/// \param caractere desejado.
 void Life::set_caractere(char carac){
 	this->characte = carac;
 }
 
+/// Verificar se alguma geração está extinta.
+/// \return retorno do estado da geração.
 bool Life::is_extinct(){
 	if(this->id[0] == 0)
 		return true;
@@ -145,7 +175,7 @@ bool Life::is_extinct(){
 }
 
 
-/// Faz as transformações para a célula "continue" em outras bordas.
+/// Realiza transformações para que a célula "continue" em outras bordas.
 void Life::bordas(){
 
 	///Trata as diagonais.
@@ -165,7 +195,8 @@ void Life::bordas(){
 		this->grid[rows-2][1] = 1;
 	}
 
-	///  Trata os casos em que células passam a bordar.
+	///  Trata os casos em que células passam a bordar, sem estar na diagonal.
+
 	for(auto i(0); i < rows ; i++){
 		if(i == 0){
 			for(auto j(1) ; j < cols-2; j++){

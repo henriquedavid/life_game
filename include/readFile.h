@@ -16,6 +16,8 @@ void readConfig(Life &lf, arq_entrada &arquivo){
 	}
 
 	char valor;
+
+	/// Vetor reserva para armazenamento de valores temporários.
 	std::vector<int> valores;
 
 	/// Filtra os elementos para dentro de um vetor.
@@ -47,10 +49,14 @@ void readConfig(Life &lf, arq_entrada &arquivo){
 		}
 		lf.add_data_vector(v);
 	}
+
+	valores.clear();
 	
 }
-// Life get_life( int posicao );
-// int get_size();
+
+/// Gera e armazena as gerações em um arquivo de saída.
+/// \param classe contendo todas as gerações.
+/// \param nome do arquivo de saída especificado pelo usuário.
 void save_file(Warehouse ware, std::string arquivo_saida)
 {
     arq_saida arquivo;
@@ -78,7 +84,11 @@ void save_file(Warehouse ware, std::string arquivo_saida)
     }
     arquivo.close();
 }
+
 /// Verifica se o usuário ainda deseja gerar mais células.
+/// \param classe com uma geração.
+/// \param classe com todas as gerações.
+/// \param valor da geração atual.
 bool print_continue(Life lf, Warehouse &wh, int value = 0){
 	char answer;
 
