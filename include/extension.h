@@ -39,27 +39,41 @@ void update( Life &lf , Warehouse &wh){
 			}
 		}
 	}
+
+	//lf.bordas();
+
 	lf.set_id();
 }
 
 bool is_stable( Life &lf_now, Warehouse &ware){
 
-	for(auto i(0); i < ware.get_size(); ++i){
+	int tamanho = ware.get_size();
+
+	if(tamanho < 2){
+		return false;
+	}
+
+	for(auto i(0); i < tamanho-1; ++i){
 
 		auto lf_temp( ware.get_life(i) );
 
-		for(auto j(1); j < lf_now.get_rows()+2; j++){
-			for(auto k(1); k < lf_now.get_columns()+2; k++){
+		for(auto j(1); j < lf_now.get_rows()-1; j++){
+			for(auto k(1); k < lf_now.get_columns()-1; k++){
 				
-				if( lf_now.get_value(j,k) != lf_temp.get_value(j,k) )
-					return true;
+				int valor = lf_now.get_value(j,k);
+				int valor1 = lf_temp.get_value(j,k);
+
+				if( valor != valor1 ){
+
+					return false;
 				}
+			}
 
 			}
 
 		}
 
-	return false;
+	return true;
 
 }
 
