@@ -128,6 +128,7 @@ void Life::update()
             }
         }
     }
+    this->bordas();
 }
 int Life::get_value( int x, int y ){
     return this->grid[x][y];
@@ -181,7 +182,49 @@ void Life::clear_ids()
     this->ids.clear();
 }
 
+/// Faz as transformações para a célula "continue" em outras bordas.
+void Life::bordas()
+{
+	///Trata as diagonais.
+	if( this->grid[0][0] == 1 )
+		this->grid[rows-2][cols-2] = 1;
+    
+	if( this->grid[rows-1][cols-1] == 1 )
+		this->grid[1][1] = 1;
 
+	if( this->grid[rows-1][0] == 1 )
+		this->grid[1][cols-2] = 1;
+
+	if( this->grid[0][cols-1] == 1)
+		this->grid[rows-2][1] = 1;
+
+	///  Trata os casos em que células passam a bordar.
+	for(auto i(0); i < rows ; i++)
+    {
+		if(i == 0)
+			for(auto j(1) ; j < cols-2; j++)
+				if( this->grid[i][j] == 1 )
+					this->grid[rows-2][j] = 1;
+
+		if( i == rows-1)
+			for(auto j(1) ; j < cols-2; j++)
+				if( this->grid[i][j] == 1 )
+					this->grid[rows-2][j] = 1;
+	}
+
+	for(auto i(1); i < rows-2 ; i++){
+		for(auto j(0) ; j < cols-1; j++){
+			if( j == 0 )
+				if( this->grid[i][j] == 1 )
+					this->grid[i][cols-2] = 1;
+
+			if( j == cols-1 )
+				if( this->grid[i][j] == 1 )
+					this->grid[i][1] = 1;
+			
+		}
+	}
+}
 
 
 

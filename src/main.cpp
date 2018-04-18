@@ -57,6 +57,7 @@ void stop()
     game->clear_ids();
     game->board->enable();
     game->board->reset();
+    text.setString("Generation: 0");
     return;
 }
 
