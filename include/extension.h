@@ -41,3 +41,25 @@ void update( Life &lf , Warehouse &wh){
 	}
 	lf.set_id();
 }
+
+bool is_stable( Life &lf_now, Warehouse &ware){
+
+	for(auto i(0); i < ware.get_size(); ++i){
+
+		auto lf_temp( ware.get_life(i) );
+
+		for(auto j(1); j < lf_now.get_rows()+2; j++){
+			for(auto k(1); k < lf_now.get_columns()+2; k++){
+				
+				if( lf_now.get_value(j,k) != lf_temp.get_value(j,k) )
+					return true;
+				}
+
+			}
+
+		}
+
+	return false;
+
+}
+

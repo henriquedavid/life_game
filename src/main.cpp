@@ -9,12 +9,13 @@
 using palavra = std::string;
 using arq_entrada = std::ifstream;
 using arq_saida = std::ofstream;
+
 #include "../include/life.h"
 #include "../include/warehouse.h"
 #include "../include/readFile.h"
-#include "../include/extension.h"
 
 #include "../include/inicial.h"
+#include "../include/extension.h"
 
 //#include <istream>
 
@@ -47,10 +48,15 @@ int main( int argc, char * argv[] ){
 	while( print_continue(lf, ware) ){
 		update(lf, ware);
 		lf.print_data_vector(ware.get_size()+1);
-		//verifica_estavel();
 
 		if(lf.is_extinct()){
 			std::cout << ">>> All Cells are extinct. Exiting...\n";
+			break;
+		}
+
+
+		if(is_stable(lf, ware)){
+			std::cout << ">>> Cells are stable. Frequecy = " << is_stable(lf, ware) << std::endl;
 			break;
 		}
 	}

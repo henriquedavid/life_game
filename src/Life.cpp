@@ -1,4 +1,4 @@
-#include "life.h"
+#include "../include/life.h"
 Life::Life(int nLin = 20, int nCol = 60)
 {
 	this->rows = nLin;
@@ -156,30 +156,3 @@ bool Life::is_extinct(){
 		return true;
 	return false;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
