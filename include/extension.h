@@ -61,12 +61,12 @@ int is_stable( Life &lf_now, Warehouse &ware){
 	int tamanho = ware.get_size();
 
 	// Trata o caso em que não há análises suficientes.
-	if(tamanho < 1){
+	if(tamanho == 0){
 		return 0;
 	}
 
 	// Percorre o vetor que contém as gerações.
-	for(auto i(0); i < tamanho-1; ++i){
+	for(auto i(0); i < tamanho; ++i){
 
 		int last_ = 0;
 
