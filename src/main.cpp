@@ -54,9 +54,9 @@ int main( int argc, char * argv[] ){
 			break;
 		}
 
-
-		if(is_stable(lf, ware)){
-			std::cout << ">>> Cells are stable. Frequecy = " << is_stable(lf, ware) << std::endl;
+		int result_stable = is_stable(lf, ware);
+		if( result_stable != 0){
+			std::cout << ">>> Cells are stable. Frequecy = " << result_stable << std::endl;
 			break;
 		}
 	}
