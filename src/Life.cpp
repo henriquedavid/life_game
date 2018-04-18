@@ -14,30 +14,14 @@ Life::Life(int nLin = 20, int nCol = 60)
 	}
 
 }
+
 Life::~Life()
 {
 	this->grid.resize(0);
 	for(int i = 0; i < this->rows; ++i)
 		this->grid[i].resize(0);
 }
-//set_alive();
-//update();
-/*
-   void Life::print(){
-   for(int i = 0; i < this->rows; ++i)
-   {
-   for(int j = 0; j < this->cols; ++j)
-   {
-   if(this->grid[i][j] == CELL_ALIVE)
-   std::cout << this->characte;
-   else
-   std::cout << ' ';
-   }
-   std::cout << std::endl;
-   }
-   }*/
-//stable();
-//extinct();
+
 Life & Life::operator=(const Life& lf) 
 {
 	this->rows = lf.rows;					    // !
@@ -183,18 +167,33 @@ void Life::bordas(){
 
 	///  Trata os casos em que células passam a bordar.
 	for(auto i(0); i < rows ; i++){
-		if(i == 0 || i == rows-1){
-			for(auto j(0) ; j < cols; j++){
-				this->grid[rows-2][j] = 1;
+		if(i == 0){
+			for(auto j(1) ; j < cols-2; j++){
+				if( this->grid[i][j] == 1 )
+					this->grid[rows-2][j] = 1;
 			}
-		} else{
 
-			for(auto j(0) ; j < cols; j++){
-				if(j == 0 || j == cols-1){
-					this->grid[i][cols-2] = 1;
-				}
+		}
+
+		if( i == rows-1){
+			for(auto j(1) ; j < cols-2; j++){
+				if( this->grid[i][j] == 1 )
+					this->grid[rows-2][j] = 1;
 			}
 		}
 	}
 
+	for(auto i(1); i < rows-2 ; i++){
+		for(auto j(0) ; j < cols-1; j++){
+			if( j == 0 ){
+				if( this->grid[i][j] == 1 )
+					this->grid[i][cols-2] = 1;
+			}
+
+			if( j == cols-1 ){
+				if( this->grid[i][j] == 1 )
+					this->grid[i][1] = 1;
+			}
+		}
+	}
 }
