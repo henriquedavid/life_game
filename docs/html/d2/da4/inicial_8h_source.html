@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Conway&#39;s Life Game Simulator: Código-Fonte de /home/henrique/Documentos/LP1/life_game/life_game/include/inicial.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Conway&#39;s Life Game Simulator
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Simulador do Jogo da Vida de Conway</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Localizar');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">inicial.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d2/da4/inicial_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="../../d2/da4/inicial_8h.html#ad4f164866493fadf04564010b318ce31">    3</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/da4/inicial_8h.html#ad4f164866493fadf04564010b318ce31">initial</a>( <a class="code" href="../../df/d57/classLife.html">Life</a> &amp;ls, <a class="code" href="../../df/d0a/main_8cpp.html#a7245fe4f29fbfabfc60878ac7b3ccc0c">palavra</a> nameFile ){</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    </div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;&gt;&gt;&gt; Trying to open input file [data/cfg1.dat]... &quot;</span>;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="../../df/d0a/main_8cpp.html#a89f2c63428e12ef30a9aecf2ff582927">arq_entrada</a> iFile;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    iFile.open(<span class="stringliteral">&quot;../&quot;</span>+nameFile);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">if</span>( !iFile.is_open() ){</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;error!\nTry again!\n&quot;</span> &lt;&lt; std::endl;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span>;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    } <span class="keywordflow">else</span>{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;done!\n&quot;</span> &lt;&lt; std::endl;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;&gt;&gt;&gt; Processing data, please wait...&quot;</span> &lt;&lt; std::endl;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        </div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="../../d3/d61/readFile_8h.html#aa6a62382d5cfcb891e8505295fd13f9f">readConfig</a>(ls, iFile);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;&gt;&gt;&gt; Grid size read from input file: &quot;</span> &lt;&lt; ls.<a class="code" href="../../df/d57/classLife.html#ae4a3608385b8435f55102c89363d6e26">get_rows</a>() &lt;&lt; <span class="stringliteral">&quot; rows by &quot;</span> &lt;&lt; ls.<a class="code" href="../../df/d57/classLife.html#ac82f1ba83db36b3142ec12c2fc334de3">get_columns</a>() &lt;&lt; <span class="stringliteral">&quot; cols.&quot;</span> &lt;&lt; std::endl;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;&gt;&gt;&gt; Character that represents a living cell read from input file: &#39;&quot;</span> &lt;&lt; ls.<a class="code" href="../../df/d57/classLife.html#a21ada75e45a4a244eeab403fb34534fe">get_caractere</a>() &lt;&lt; <span class="stringliteral">&quot;&#39;\n&quot;</span> &lt;&lt; std::endl;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        std::cout &lt;&lt; std::setw(80) &lt;&lt; std::setfill(<span class="charliteral">&#39;*&#39;</span>) &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; std::endl;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Welcome to Conways game of Life.\n&quot;</span> </div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot;By default this game uses a grid of size 20 by 60 in which\n&quot;</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot;each cell can either be occupied by an organism or not.\n&quot;</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot;The occupied cells change from generation to generation\n&quot;</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                      &lt;&lt; <span class="stringliteral">&quot;according to the number of neighboring cells which are alive.&quot;</span> &lt;&lt; std::endl;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::cout &lt;&lt; std::setw(80) &lt;&lt; std::setfill(<span class="charliteral">&#39;*&#39;</span>) &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; std::endl;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::cout &lt;&lt; std::endl;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    iFile.close();</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div><div class="ttc" id="readFile_8h_html_aa6a62382d5cfcb891e8505295fd13f9f"><div class="ttname"><a href="../../d3/d61/readFile_8h.html#aa6a62382d5cfcb891e8505295fd13f9f">readConfig</a></div><div class="ttdeci">void readConfig(Life &amp;lf, arq_entrada &amp;arquivo)</div><div class="ttdef"><b>Definition:</b> readFile.h:5</div></div>
+<div class="ttc" id="classLife_html_a21ada75e45a4a244eeab403fb34534fe"><div class="ttname"><a href="../../df/d57/classLife.html#a21ada75e45a4a244eeab403fb34534fe">Life::get_caractere</a></div><div class="ttdeci">char get_caractere()</div><div class="ttdef"><b>Definition:</b> Life.cpp:159</div></div>
+<div class="ttc" id="classLife_html_ac82f1ba83db36b3142ec12c2fc334de3"><div class="ttname"><a href="../../df/d57/classLife.html#ac82f1ba83db36b3142ec12c2fc334de3">Life::get_columns</a></div><div class="ttdeci">int get_columns()</div><div class="ttdef"><b>Definition:</b> Life.cpp:141</div></div>
+<div class="ttc" id="main_8cpp_html_a89f2c63428e12ef30a9aecf2ff582927"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a89f2c63428e12ef30a9aecf2ff582927">arq_entrada</a></div><div class="ttdeci">std::ifstream arq_entrada</div><div class="ttdef"><b>Definition:</b> main.cpp:10</div></div>
+<div class="ttc" id="classLife_html"><div class="ttname"><a href="../../df/d57/classLife.html">Life</a></div><div class="ttdoc">Classe que contém todos as configurações/propriedades de uma geração. </div><div class="ttdef"><b>Definition:</b> life.h:17</div></div>
+<div class="ttc" id="classLife_html_ae4a3608385b8435f55102c89363d6e26"><div class="ttname"><a href="../../df/d57/classLife.html#ae4a3608385b8435f55102c89363d6e26">Life::get_rows</a></div><div class="ttdeci">int get_rows()</div><div class="ttdef"><b>Definition:</b> Life.cpp:136</div></div>
+<div class="ttc" id="inicial_8h_html_ad4f164866493fadf04564010b318ce31"><div class="ttname"><a href="../../d2/da4/inicial_8h.html#ad4f164866493fadf04564010b318ce31">initial</a></div><div class="ttdeci">void initial(Life &amp;ls, palavra nameFile)</div><div class="ttdoc">Inicialização do sistema. </div><div class="ttdef"><b>Definition:</b> inicial.h:3</div></div>
+<div class="ttc" id="main_8cpp_html_a7245fe4f29fbfabfc60878ac7b3ccc0c"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a7245fe4f29fbfabfc60878ac7b3ccc0c">palavra</a></div><div class="ttdeci">std::string palavra</div><div class="ttdef"><b>Definition:</b> main.cpp:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

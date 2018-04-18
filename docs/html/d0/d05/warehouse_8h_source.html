@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Conway&#39;s Life Game Simulator: Código-Fonte de /home/henrique/Documentos/LP1/life_game/life_game/include/warehouse.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Conway&#39;s Life Game Simulator
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Simulador do Jogo da Vida de Conway</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Localizar');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">warehouse.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d0/d05/warehouse_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="../../d5/d6b/classWarehouse.html">    3</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d6b/classWarehouse.html">Warehouse</a> {</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../d5/d6b/classWarehouse.html#a6b2896ac60f5230a41460d7febcc1fbf">    6</a></span>&#160;        std::vector&lt;Life&gt; <a class="code" href="../../d5/d6b/classWarehouse.html#a6b2896ac60f5230a41460d7febcc1fbf">lifes</a>;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../d5/d6b/classWarehouse.html#a379699c9693c068cdedbd54453e837fa">    7</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d5/d6b/classWarehouse.html#a379699c9693c068cdedbd54453e837fa">generation_number</a>;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d5/d6b/classWarehouse.html#ad34dcb3f59757a52f9084a973779e536">   13</a></span>&#160;        <a class="code" href="../../d5/d6b/classWarehouse.html#ad34dcb3f59757a52f9084a973779e536">Warehouse</a>( <span class="keywordtype">int</span> gen_numb = 0 ){</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            this-&gt;generation_number = gen_numb;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        }</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d5/d6b/classWarehouse.html#a2ff79dc26f107b668d2e5fa7b2eeafc4">   18</a></span>&#160;        <a class="code" href="../../d5/d6b/classWarehouse.html#a2ff79dc26f107b668d2e5fa7b2eeafc4">~Warehouse</a>(){</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            this-&gt;lifes.clear();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d5/d6b/classWarehouse.html#a6ec18d658786c3f8f6577c31aac9481f">   24</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d5/d6b/classWarehouse.html#a6ec18d658786c3f8f6577c31aac9481f">add_life</a>( <a class="code" href="../../df/d57/classLife.html">Life</a> lf ){</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            this-&gt;lifes.push_back(lf);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d5/d6b/classWarehouse.html#a390439a84e9be046eb97db2ef42ff378">   31</a></span>&#160;        <a class="code" href="../../df/d57/classLife.html">Life</a> <a class="code" href="../../d5/d6b/classWarehouse.html#a390439a84e9be046eb97db2ef42ff378">get_life</a>( <span class="keywordtype">int</span> posicao ){</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">return</span> lifes[posicao];</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d5/d6b/classWarehouse.html#a1dde22e2b865dc1ab0b8d15f334322e6">   37</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d5/d6b/classWarehouse.html#a1dde22e2b865dc1ab0b8d15f334322e6">get_size</a>(){</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">return</span> lifes.size();</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div><div class="ttc" id="classWarehouse_html_a6b2896ac60f5230a41460d7febcc1fbf"><div class="ttname"><a href="../../d5/d6b/classWarehouse.html#a6b2896ac60f5230a41460d7febcc1fbf">Warehouse::lifes</a></div><div class="ttdeci">std::vector&lt; Life &gt; lifes</div><div class="ttdef"><b>Definition:</b> warehouse.h:6</div></div>
+<div class="ttc" id="classWarehouse_html"><div class="ttname"><a href="../../d5/d6b/classWarehouse.html">Warehouse</a></div><div class="ttdoc">Classe que armazena todos as configurações/gerações formadas. </div><div class="ttdef"><b>Definition:</b> warehouse.h:3</div></div>
+<div class="ttc" id="classWarehouse_html_a379699c9693c068cdedbd54453e837fa"><div class="ttname"><a href="../../d5/d6b/classWarehouse.html#a379699c9693c068cdedbd54453e837fa">Warehouse::generation_number</a></div><div class="ttdeci">int generation_number</div><div class="ttdef"><b>Definition:</b> warehouse.h:7</div></div>
+<div class="ttc" id="classWarehouse_html_a2ff79dc26f107b668d2e5fa7b2eeafc4"><div class="ttname"><a href="../../d5/d6b/classWarehouse.html#a2ff79dc26f107b668d2e5fa7b2eeafc4">Warehouse::~Warehouse</a></div><div class="ttdeci">~Warehouse()</div><div class="ttdoc">Desconstrutor para apagar o vetor e não deixar espaço na memória após finalizar o vetor...</div><div class="ttdef"><b>Definition:</b> warehouse.h:18</div></div>
+<div class="ttc" id="classWarehouse_html_a6ec18d658786c3f8f6577c31aac9481f"><div class="ttname"><a href="../../d5/d6b/classWarehouse.html#a6ec18d658786c3f8f6577c31aac9481f">Warehouse::add_life</a></div><div class="ttdeci">void add_life(Life lf)</div><div class="ttdef"><b>Definition:</b> warehouse.h:24</div></div>
+<div class="ttc" id="classLife_html"><div class="ttname"><a href="../../df/d57/classLife.html">Life</a></div><div class="ttdoc">Classe que contém todos as configurações/propriedades de uma geração. </div><div class="ttdef"><b>Definition:</b> life.h:17</div></div>
+<div class="ttc" id="classWarehouse_html_a1dde22e2b865dc1ab0b8d15f334322e6"><div class="ttname"><a href="../../d5/d6b/classWarehouse.html#a1dde22e2b865dc1ab0b8d15f334322e6">Warehouse::get_size</a></div><div class="ttdeci">int get_size()</div><div class="ttdef"><b>Definition:</b> warehouse.h:37</div></div>
+<div class="ttc" id="classWarehouse_html_ad34dcb3f59757a52f9084a973779e536"><div class="ttname"><a href="../../d5/d6b/classWarehouse.html#ad34dcb3f59757a52f9084a973779e536">Warehouse::Warehouse</a></div><div class="ttdeci">Warehouse(int gen_numb=0)</div><div class="ttdef"><b>Definition:</b> warehouse.h:13</div></div>
+<div class="ttc" id="classWarehouse_html_a390439a84e9be046eb97db2ef42ff378"><div class="ttname"><a href="../../d5/d6b/classWarehouse.html#a390439a84e9be046eb97db2ef42ff378">Warehouse::get_life</a></div><div class="ttdeci">Life get_life(int posicao)</div><div class="ttdef"><b>Definition:</b> warehouse.h:31</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

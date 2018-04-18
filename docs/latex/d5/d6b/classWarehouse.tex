@@ -1,0 +1,115 @@
+\hypertarget{classWarehouse}{}\section{Referência à classe Warehouse}
+\label{classWarehouse}\index{Warehouse@{Warehouse}}
+
+
+Classe que armazena todos as configurações/gerações formadas.  
+
+
+
+
+{\ttfamily \#include $<$warehouse.\+h$>$}
+
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classWarehouse_ad34dcb3f59757a52f9084a973779e536}{Warehouse} (int gen\+\_\+numb=0)
+\item 
+\hyperlink{classWarehouse_a2ff79dc26f107b668d2e5fa7b2eeafc4}{$\sim$\+Warehouse} ()
+\begin{DoxyCompactList}\small\item\em Desconstrutor para apagar o vetor e não deixar espaço na memória após finalizar o vetor. \end{DoxyCompactList}\item 
+void \hyperlink{classWarehouse_a6ec18d658786c3f8f6577c31aac9481f}{add\+\_\+life} (\hyperlink{classLife}{Life} lf)
+\item 
+\hyperlink{classLife}{Life} \hyperlink{classWarehouse_a390439a84e9be046eb97db2ef42ff378}{get\+\_\+life} (int posicao)
+\item 
+int \hyperlink{classWarehouse_a1dde22e2b865dc1ab0b8d15f334322e6}{get\+\_\+size} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{classLife}{Life} $>$ \hyperlink{classWarehouse_a6b2896ac60f5230a41460d7febcc1fbf}{lifes}
+\item 
+int \hyperlink{classWarehouse_a379699c9693c068cdedbd54453e837fa}{generation\+\_\+number}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe que armazena todos as configurações/gerações formadas. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classWarehouse_ad34dcb3f59757a52f9084a973779e536}\label{classWarehouse_ad34dcb3f59757a52f9084a973779e536}} 
+\index{Warehouse@{Warehouse}!Warehouse@{Warehouse}}
+\index{Warehouse@{Warehouse}!Warehouse@{Warehouse}}
+\subsubsection{\texorpdfstring{Warehouse()}{Warehouse()}}
+{\footnotesize\ttfamily Warehouse\+::\+Warehouse (\begin{DoxyParamCaption}\item[{int}]{gen\+\_\+numb = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Inicializador da classe \hyperlink{classWarehouse}{Warehouse}. 
+\begin{DoxyParams}{Parâmetros}
+{\em número} & de gerações. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWarehouse_a2ff79dc26f107b668d2e5fa7b2eeafc4}\label{classWarehouse_a2ff79dc26f107b668d2e5fa7b2eeafc4}} 
+\index{Warehouse@{Warehouse}!````~Warehouse@{$\sim$\+Warehouse}}
+\index{````~Warehouse@{$\sim$\+Warehouse}!Warehouse@{Warehouse}}
+\subsubsection{\texorpdfstring{$\sim$\+Warehouse()}{~Warehouse()}}
+{\footnotesize\ttfamily Warehouse\+::$\sim$\+Warehouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Desconstrutor para apagar o vetor e não deixar espaço na memória após finalizar o vetor. 
+
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classWarehouse_a6ec18d658786c3f8f6577c31aac9481f}\label{classWarehouse_a6ec18d658786c3f8f6577c31aac9481f}} 
+\index{Warehouse@{Warehouse}!add\+\_\+life@{add\+\_\+life}}
+\index{add\+\_\+life@{add\+\_\+life}!Warehouse@{Warehouse}}
+\subsubsection{\texorpdfstring{add\+\_\+life()}{add\_life()}}
+{\footnotesize\ttfamily void Warehouse\+::add\+\_\+life (\begin{DoxyParamCaption}\item[{\hyperlink{classLife}{Life}}]{lf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adiciona uma nova classe \hyperlink{classLife}{Life} ao vetor lifes. 
+\begin{DoxyParams}{Parâmetros}
+{\em classe} & de configuração. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWarehouse_a390439a84e9be046eb97db2ef42ff378}\label{classWarehouse_a390439a84e9be046eb97db2ef42ff378}} 
+\index{Warehouse@{Warehouse}!get\+\_\+life@{get\+\_\+life}}
+\index{get\+\_\+life@{get\+\_\+life}!Warehouse@{Warehouse}}
+\subsubsection{\texorpdfstring{get\+\_\+life()}{get\_life()}}
+{\footnotesize\ttfamily \hyperlink{classLife}{Life} Warehouse\+::get\+\_\+life (\begin{DoxyParamCaption}\item[{int}]{posicao }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retorna uma classe \hyperlink{classLife}{Life} do vetor lifes. 
+\begin{DoxyParams}{Parâmetros}
+{\em posição} & desejada no vetor lifes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+retorna a classe na posição desejada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWarehouse_a1dde22e2b865dc1ab0b8d15f334322e6}\label{classWarehouse_a1dde22e2b865dc1ab0b8d15f334322e6}} 
+\index{Warehouse@{Warehouse}!get\+\_\+size@{get\+\_\+size}}
+\index{get\+\_\+size@{get\+\_\+size}!Warehouse@{Warehouse}}
+\subsubsection{\texorpdfstring{get\+\_\+size()}{get\_size()}}
+{\footnotesize\ttfamily int Warehouse\+::get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Obter o tamanho do vetor lifes, quantidade total de gerações. \begin{DoxyReturn}{Retorna}
+retorna a quantidade de classes \hyperlink{classLife}{Life} no vetor lifes. 
+\end{DoxyReturn}
+
+
+\subsection{Documentação dos dados membro}
+\mbox{\Hypertarget{classWarehouse_a379699c9693c068cdedbd54453e837fa}\label{classWarehouse_a379699c9693c068cdedbd54453e837fa}} 
+\index{Warehouse@{Warehouse}!generation\+\_\+number@{generation\+\_\+number}}
+\index{generation\+\_\+number@{generation\+\_\+number}!Warehouse@{Warehouse}}
+\subsubsection{\texorpdfstring{generation\+\_\+number}{generation\_number}}
+{\footnotesize\ttfamily int Warehouse\+::generation\+\_\+number\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classWarehouse_a6b2896ac60f5230a41460d7febcc1fbf}\label{classWarehouse_a6b2896ac60f5230a41460d7febcc1fbf}} 
+\index{Warehouse@{Warehouse}!lifes@{lifes}}
+\index{lifes@{lifes}!Warehouse@{Warehouse}}
+\subsubsection{\texorpdfstring{lifes}{lifes}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classLife}{Life}$>$ Warehouse\+::lifes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+/home/henrique/\+Documentos/\+L\+P1/life\+\_\+game/life\+\_\+game/include/\hyperlink{warehouse_8h}{warehouse.\+h}\end{DoxyCompactItemize}
