@@ -55,5 +55,6 @@ class Life {
 	bool is_extinct();
     void set_id();
     void save_file(std::string filename);
+    void bordas();
 };
 #endif

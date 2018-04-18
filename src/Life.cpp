@@ -55,6 +55,8 @@ Life & Life::operator=(const Life& lf)
 	return *this; 						        // permite atribuição em cascata 
 	// TODO: traduzir comentarios
 }
+
+
 bool Life::operator==(const Life& lf) const 
 {
 	int n = this->id[0];            // number of elements: number of distances + start_x + start_y + distance_1 + ... + distance_n
@@ -65,6 +67,7 @@ bool Life::operator==(const Life& lf) const
 	}
 	return true;
 }
+
 void Life::set_id()
 {
 	int n = 0;
@@ -155,4 +158,43 @@ bool Life::is_extinct(){
 	if(this->id[0] == 0)
 		return true;
 	return false;
+}
+
+
+/// Faz as transformações para a célula "continue" em outras bordas.
+void Life::bordas(){
+
+	///Trata as diagonais.
+	if( this->grid[0][0] == 1 ){
+		this->grid[rows-2][cols-2] = 1;
+	}
+
+	if( this->grid[rows-1][cols-1] == 1 ){
+		this->grid[1][1] = 1;
+	}
+
+	if( this->grid[rows-1][0] == 1 ){
+		this->grid[1][cols-2] = 1;
+	}
+
+	if( this->grid[0][cols-1] == 1){
+		this->grid[rows-2][1] = 1;
+	}
+
+	///  Trata os casos em que células passam a bordar.
+	for(auto i(0); i < rows ; i++){
+		if(i == 0 || i == rows-1){
+			for(auto j(0) ; j < cols; j++){
+				this->grid[rows-2][j] = 1;
+			}
+		} else{
+
+			for(auto j(0) ; j < cols; j++){
+				if(j == 0 || j == cols-1){
+					this->grid[i][cols-2] = 1;
+				}
+			}
+		}
+	}
+
 }
