@@ -4,3 +4,10 @@ Desenvolvedores:
 
 Instruções de Compilação:
 	
+- Na pasta src, da pasta life_game, execute o seguinte código:
+"g++ -Wall -std=c++11 Life.cpp main.cpp -o exec"
+
+Instruções de Execução:
+
+- Na pasta src:
+"./exec <arqEntrada> [<arqSaida>]"
