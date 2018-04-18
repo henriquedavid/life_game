@@ -73,5 +73,6 @@ int main( int argc, char * argv[] ){
 	// Salva o arquivo no arquivo de saída informado pelo usuário.
 	if(argc == 3)
 		save_file(ware, arquivo_saida);
+	
 	return 0;
 }

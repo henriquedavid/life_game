@@ -34,10 +34,10 @@ Life & Life::operator=(const Life& lf)
 	this->rows = lf.rows;					    // !
 	this->cols = lf.cols;					    // | iguala propriedades
 	this->grid.resize(lf.rows);	 			    // altera quantidade de linhas
-	for(int i = 0; i < lf.rows+2; ++i) 			// percorre cada linha
+	for(int i = 0; i < lf.rows; ++i) 			// percorre cada linha
 	{
-		this->grid[i].resize(lf.cols+2);			// redimensiona linha
-		for(int j = 0; j < lf.cols+2; ++j)		// percorred as colunas
+		this->grid[i].resize(lf.cols);			// redimensiona linha
+		for(int j = 0; j < lf.cols; ++j)		// percorred as colunas
 		{
 			this->grid[i][j] = lf.grid[i][j]; 	// realiza a atribuição
 		}

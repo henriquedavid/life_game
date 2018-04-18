@@ -57,7 +57,7 @@ void readConfig(Life &lf, arq_entrada &arquivo){
 /// Gera e armazena as gerações em um arquivo de saída.
 /// \param classe contendo todas as gerações.
 /// \param nome do arquivo de saída especificado pelo usuário.
-void save_file(Warehouse ware, palavra arquivo_saida)
+void save_file(Warehouse &ware, palavra &arquivo_saida)
 {
     arq_saida arquivo;
 
@@ -92,9 +92,8 @@ void save_file(Warehouse ware, palavra arquivo_saida)
         arquivo << "Showing generation " << k << ":" << std::endl;
 
         /// Imprime a configuração em uma determinada célula.
-        for( auto i(1) ; i < lf.get_rows() ; i++ ){
-            for( auto j(1) ; j < lf.get_columns() ; j++){
-
+        for( auto i(1) ; i < lf.get_rows() +1 ; i++ ){
+            for( auto j(1) ; j < lf.get_columns()+1 ; j++){
 
             	/// Verifica se ela está viva ou morta.
                 if(lf.get_value(i, j) == CELL_ALIVE)
@@ -103,10 +102,14 @@ void save_file(Warehouse ware, palavra arquivo_saida)
                     arquivo << '.';
 
             }
+
             arquivo << std::endl;
         }
+
         arquivo << std::endl << std::endl;
     }
+
+
     arquivo.close();
 }
 
