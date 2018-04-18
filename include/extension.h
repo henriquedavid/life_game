@@ -52,23 +52,23 @@ void update( Life &lf , Warehouse &wh){
 /// Verifica se a geração é estável.
 /// \ṕaram Geração atual.
 /// \param Classe que obtém todas as gerações.
-/// \return Verdadeiro se forem iguais e falso se forem diferentes.
-bool is_stable( Life &lf_now, Warehouse &ware){
+/// \return 0 significa que não há igual, qualquer outro valor irá corresponder ao valor da geração que é igual.
+int is_stable( Life &lf_now, Warehouse &ware){
 
-	bool estado = false;
+	int estado = 0;
 
 	// Recupera o tamanho do vetor que contém todas as gerações.
 	int tamanho = ware.get_size();
 
 	// Trata o caso em que não há análises suficientes.
-	if(tamanho < 2){
-		return false;
+	if(tamanho < 1){
+		return 0;
 	}
-
-	int last_ = 0;
 
 	// Percorre o vetor que contém as gerações.
 	for(auto i(0); i < tamanho-1; ++i){
+
+		int last_ = 0;
 
 		// Obtém cada geração.
 		auto lf_temp( ware.get_life(i) );
@@ -81,7 +81,7 @@ bool is_stable( Life &lf_now, Warehouse &ware){
 				int valor = lf_now.get_value(j,k);
 				int valor1 = lf_temp.get_value(j,k);
 
-				/* Contabilizam os valores.
+				/* Contabilizam os valores que são iguais e para a repetição nos que são diferentes.
 				 */
 				if( valor != valor1 )
 					break;
@@ -91,11 +91,14 @@ bool is_stable( Life &lf_now, Warehouse &ware){
 			}
 		}
 
+		// Verificação de quantidade de elementos, se iguais então
+		// possui alguma classe é igual a ela.
 		if(last_ == ((lf_now.get_columns()) * (lf_now.get_rows())))
-			estado = true;
+			estado = i+1;
 
 	}
 
+	// Retorna a conclusão da análise.
 	return estado;
 
 }
