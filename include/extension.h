@@ -40,7 +40,7 @@ void update( Life &lf , Warehouse &wh){
 		}
 	}
 
-	//lf.bordas();
+	lf.bordas();
 
 	lf.set_id();
 }
