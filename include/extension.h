@@ -46,7 +46,6 @@ void update( Life &lf , Warehouse &wh){
 	// Gera as bordas que ultrapassam a bordas do outro lado.
 	lf.bordas();
 
-	lf.set_id();
 }
 
 /// Verifica se a geração é estável.

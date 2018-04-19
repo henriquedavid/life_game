@@ -29,11 +29,7 @@ class Life {
 	Life(int nLin, int nCol);
 
 	/// Construtor informando as configurações básicas de uma geração.
-	Life(int nLin, int nCol, char caract){
-		this->rows = nLin;
-		this->cols = nCol;
-		this->characte = caract;
-	}
+	Life(int nLin, int nCol, char caract);
 
 	/// Desconstrutor.
 	~Life();
@@ -91,8 +87,6 @@ class Life {
 	/// Verificar se alguma geração está extinta, ou seja, não possui nenhuma célula.
 	/// \return retorno do estado da geração.
 	bool is_extinct();
-    
-    void set_id();
     
     /// Salva os dados de cada geração em um arquivo de saída.
     /// \param nome do arquivo de saída desejado.

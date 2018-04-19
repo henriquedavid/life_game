@@ -15,12 +15,18 @@ Life::Life(int nLin = 20, int nCol = 60)
 
 }
 
+Life::Life(int nLin, int nCol, char caract){
+	this->rows = nLin;
+	this->cols = nCol;
+	this->characte = caract;
+}
+
 /// Desconstrutor da classe Life.
 Life::~Life()
 {
-	this->grid.resize(0);
 	for(int i = 0; i < this->rows; ++i)
 		this->grid[i].resize(0);
+	this->grid.resize(0);
 }
 
 /// Operador de atribuição da classe Life.

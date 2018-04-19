@@ -89,7 +89,7 @@ void save_file(Warehouse &ware, palavra &arquivo_saida)
     	/// Obtém cada célula.
         lf = ware.get_life(k);
 
-        arquivo << "Showing generation " << k << ":" << std::endl;
+        arquivo << "Showing generation " << k+1 << ":" << std::endl;
 
         /// Imprime a configuração em uma determinada célula.
         for( auto i(1) ; i < lf.get_rows() +1 ; i++ ){
