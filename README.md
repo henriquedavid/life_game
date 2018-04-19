@@ -1,26 +1,26 @@
 # Conway's Life Game Simulator
 
 Desenvolvedores:
-- Henrique David de Medeiros
-- Pablo Emanuell L. Targino
+- Henrique David de Medeiros	(*henriquemed101@gmail.com*)
+- Pablo Emanuell L. Targino	(*pabloemanuell@academico.ufrn.br*)
 
 Instruções de Compilação:
 	
 - Na pasta src, da pasta life_game, execute o seguinte código:<br>
-"g++ -Wall -std=c++11 Life.cpp main.cpp -o exec"
+*g++ -Wall -std=c++11 Life.cpp main.cpp -o exec*
 
 ou 
 
-- Abra a pasta principal (life_game) no terminal e execute "make", o executável aparecerá em uma pasta bin.
+- Abra a pasta principal (life_game) no terminal e execute *make*, o executável aparecerá em uma pasta bin.
 
 Instruções de Execução:
 
 - Na pasta do executável:<br>
-"./exec arqEntrada arqSaida_opcional"
+*./exec arqEntrada arqSaida_opcional*
 
 ou
 
-- Caso o executável foi gerado pelo make, na pasta principal execute <br> "./bin/exec arqEntrada arqSaida_opcional"
+- Caso o executável foi gerado pelo make, na pasta principal execute <br>*./bin/exec arqEntrada arqSaida_opcional*
 
 
 O trabalho está dividindo em dois tipo:
