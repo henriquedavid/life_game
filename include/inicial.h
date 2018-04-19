@@ -2,6 +2,8 @@
 #define INICIAL_H
 
 /// Inicialização do sistema
+/// \param Classe Life com a configuração
+/// \param Nome do arquivo de entrada.
 void initial( Life &ls, palavra nameFile ){
 	
 	std::cout << ">>> Trying to open input file [data/cfg1.dat]... ";

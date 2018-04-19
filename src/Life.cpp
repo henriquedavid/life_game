@@ -15,6 +15,11 @@ Life::Life(int nLin = 20, int nCol = 60)
 
 }
 
+
+/// Construtor da classe Life.
+/// \param numeros de linhas, padrão é 20 linhas caso o usuário não informe.
+/// \param numeros de colunas, padrão é 60 colunas caso o usuário não informe.
+/// \param caractere utilizado no arquivo para identificar uma célula viva.
 Life::Life(int nLin, int nCol, char caract){
 	this->rows = nLin;
 	this->cols = nCol;
@@ -49,11 +54,13 @@ Life & Life::operator=(const Life& lf)
 }
 
 /// Adiciona dados ao vetor da classe Grid na classe Life.
+/// \ṕaram vetor representando linhas com elementos para formar uma matriz.
 void Life::add_data_vector(std::vector<int> vetor){
 	grid.push_back(vetor);
 }
 
 /// Imprime para o usuário como está a organização das células.
+/// \param geração que está prestes a ser gerada.
 void Life::print_data_vector(int numero_geracao){
 	std::cout << "Showing generation " << numero_geracao << ":\n";
 	for( auto i(1) ; i < this->rows+1 ; i++ ){
@@ -77,8 +84,8 @@ int Life::get_value( int x, int y ){
 }
 
 /// Modificar valor em uma determinada posição.
-/// \param número da linha
-/// \param número da coluna
+/// \param número da linha.
+/// \param número da coluna.
 /// \param valor desejado que seja inserido na posição informada.
 void Life::set_value( int x, int y, int value ){
 	this->grid[x][y] = value;

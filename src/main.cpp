@@ -64,7 +64,7 @@ int main( int argc, char * argv[] ){
 		// Verifica se a geração é estável.
 		int result_stable = is_stable(lf, ware);
 		if( result_stable != 0){
-			std::cout << ">>> Cells are stable. Frequecy = " << result_stable << std::endl;
+			std::cout << ">>> Cells are stable. Generation equal to " << result_stable << std::endl;
 			break;
 		}
 	}

@@ -26,9 +26,14 @@ class Life {
 	public:
 	
 	/// Contrutor padrão, sem especificar o caractere utilizado.
+	/// \param quantidade de linhas da matriz.
+	/// \param quantidade de colunas da matriz.
 	Life(int nLin, int nCol);
 
 	/// Construtor informando as configurações básicas de uma geração.
+	/// \param quantidade de linhas da matriz.
+	/// \param quantidade de colunas da matriz.
+	/// \param padrão de representação para células vivas.
 	Life(int nLin, int nCol, char caract);
 
 	/// Desconstrutor.
