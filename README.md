@@ -20,6 +20,6 @@ O trabalho está dividindo em dois tipo:
 
 Acesso pelo GitHub:
 - Organização dos dados em branches diferentes.
--- Branch master -> Jogo completo e funcional, sem erros.
--- Branch sfml_version -> Versão visual, pode conter alguns erros.
+- Branch master -> Jogo completo e funcional, sem erros.
+- Branch sfml_version -> Versão visual, pode conter alguns erros.
 
