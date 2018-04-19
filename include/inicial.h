@@ -1,3 +1,5 @@
+#ifndef INICIAL_H
+#define INICIAL_H
 
 /// Inicialização do sistema
 void initial( Life &ls, palavra nameFile ){
@@ -44,3 +46,5 @@ void initial( Life &ls, palavra nameFile ){
 	iFile.close();
 
 }
+
+#endif

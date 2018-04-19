@@ -1,3 +1,6 @@
+#ifndef READFILE_H
+#define READFILE_H
+
 #include <iomanip>
 /// Configura a classe Life pelo arquivo configuração.
 /// \param Classe Life
@@ -142,3 +145,5 @@ bool print_continue(Life lf, Warehouse &wh, int value = 0){
 
 	return true;
 }
+
+#endif

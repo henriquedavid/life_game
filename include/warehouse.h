@@ -1,3 +1,5 @@
+#ifndef WAREHOUSE_H
+#define WAREHOUSE_H
 
 /// Classe que armazena todos as configurações/gerações formadas.
 class Warehouse {
@@ -38,3 +40,5 @@ class Warehouse {
 			return lifes.size();
 		}
 };
+
+#endif

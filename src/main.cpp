@@ -17,8 +17,6 @@ using arq_saida = std::ofstream;
 #include "../include/inicial.h"
 #include "../include/extension.h"
 
-//#include <istream>
-
 int main( int argc, char * argv[] ){
 
 	palavra arquivo;		// arquivo de entrada.

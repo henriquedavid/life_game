@@ -7,7 +7,7 @@ Life::Life(int nLin = 20, int nCol = 60)
 {
 	this->rows = nLin;
 	this->rows = nCol;
-	this->grid.resize(nLin+2, {{CELL_DIED}}); // aloca linhas com valor padrao
+	this->grid.resize(nLin+2, {CELL_DIED}); // aloca linhas com valor padrao
 	for(int i = 0; i < nLin+2; ++i) // percorre linhas
 	{
 		this->grid[i].resize(nCol+2, CELL_DIED); // aloca colunas da linha com valor padrao
