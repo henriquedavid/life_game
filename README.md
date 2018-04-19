@@ -23,6 +23,8 @@ ou
 - Caso o executável foi gerado pelo make, na pasta principal execute <br>*./bin/exec arqEntrada arqSaida_opcional*
 
 
+**Modelos de arquivos de entradas estão na pasta *data/*.**
+
 O trabalho está dividindo em dois tipo:
 - execução no terminal, pasta life_game; e
 - execução visual, pasta life_game_sfml.
