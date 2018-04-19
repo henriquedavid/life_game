@@ -32,7 +32,7 @@ void readConfig(Life &lf, arq_entrada &arquivo){
 	unsigned int tamanho = ro * col;
 
 	if( tamanho != valores.size()){
-		std::cout << "Há células faltantes na configuração inicial!" << std::endl;
+		std::cout << "ERROR! There are missing cells in the initial configuration!" << std::endl;
 		exit(0);
 	}
 
