@@ -1,5 +1,5 @@
-//#ifndef LIFE_H
-//#define LIFE_H
+#ifndef LIFE_H
+#define LIFE_H
 
 #include <iostream>
 #include <vector>
@@ -94,6 +94,8 @@ class Life {
     
     /// Realiza transformações para que a célula "continue" em outras bordas.
     void bordas();
-
+    
+    /// Transfere valores dos limites da grid para a borda.
+    void load_bordas();
 };
-//#endif
+#endif

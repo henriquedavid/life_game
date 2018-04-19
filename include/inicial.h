@@ -7,13 +7,13 @@ void initial( Life &ls, palavra nameFile ){
 	arq_entrada iFile;
 
 	/// Abre o arquivo.
-	iFile.open("../"+nameFile);
+	iFile.open(nameFile);
 
 	/// Verifica se o arquivo foi aberto.
-	if( !iFile.is_open() ){
+	if(iFile.fail()){
 
 		std::cout << "error!\nTry again!\n" << std::endl;
-		return;
+		std::exit(1);
 
 	} else{
 

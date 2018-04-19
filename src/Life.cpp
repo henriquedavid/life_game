@@ -131,57 +131,51 @@ bool Life::is_extinct(){
 	return true;
 }
 
-
-/// Realiza transformações para que a célula "continue" em outras bordas.
-void Life::bordas(){
-
+/// Transfere os valores dos limites da grid para a borda.
+void Life::bordas()
+{
+    int rows = this->rows;
+    int cols = this->cols;
 	///Trata as diagonais.
-	if( this->grid[0][0] == 1 ){
-		this->grid[rows-2][cols-2] = 1;
-	}
-
-	if( this->grid[rows-1][cols-1] == 1 ){
-		this->grid[1][1] = 1;
-	}
-
-	if( this->grid[rows-1][0] == 1 ){
-		this->grid[1][cols-2] = 1;
-	}
-
-	if( this->grid[0][cols-1] == 1){
-		this->grid[rows-2][1] = 1;
-	}
-
-	///  Trata os casos em que células passam a bordar, sem estar na diagonal.
-
-	for(auto i(0); i < rows ; i++){
-		if(i == 0){
-			for(auto j(1) ; j < cols-2; j++){
-				if( this->grid[i][j] == 1 )
-					this->grid[rows-2][j] = 1;
-			}
-
-		}
-
-		if( i == rows-1){
-			for(auto j(1) ; j < cols-2; j++){
-				if( this->grid[i][j] == 1 )
-					this->grid[rows-2][j] = 1;
-			}
-		}
-	}
-
-	for(auto i(1); i < rows-2 ; i++){
-		for(auto j(0) ; j < cols-1; j++){
-			if( j == 0 ){
-				if( this->grid[i][j] == 1 )
-					this->grid[i][cols-2] = 1;
-			}
-
-			if( j == cols-1 ){
-				if( this->grid[i][j] == 1 )
-					this->grid[i][1] = 1;
-			}
-		}
-	}
+    set_value(rows, cols, this->grid[0][0]);
+    set_value(1, 1, this->grid[rows+1][cols+1]);
+    set_value(1, cols, this->grid[rows+1][0]);
+    set_value(rows, 1, this->grid[0][cols+1]);
+	///  Borda esquerda
+	for(auto i(1); i <= rows; i++)
+            set_value(i, cols, this->grid[i][0]);
+    //  Borda direita
+	for(auto i(1); i <= rows ; i++){
+            set_value(i, 1, this->grid[i][cols+1]);
+    }
+    ///  Borda superior
+	for(auto j(1); j <= cols ; j++)
+            set_value(rows, j, this->grid[0][j]);
+    ///  Borda superior
+	for(auto j(1); j <= cols ; j++)
+            set_value(1, j, this->grid[rows+1][j]);
+}
+/// Transfere valores dos limites da grid para a borda.
+void Life::load_bordas()
+{
+    int rows = this->rows;
+    int cols = this->cols;
+	/// Trata as diagonais.
+    set_value(rows+1, cols+1, this->grid[1][1]);
+    set_value(0, 0, this->grid[rows][cols]);
+    set_value(0, cols+1, this->grid[rows][1]);
+    set_value(rows+1, 0, this->grid[1][cols]);
+	///  Borda esquerda recebe lado direito
+	for(auto i(1); i <= rows; i++)
+            set_value(i, 0, this->grid[i][cols]);
+    //  Borda direita recebe lado esquerdo
+	for(auto i(1); i <= rows ; i++){
+            set_value(i, cols+1, this->grid[i][1]);
+    }
+    ///  Borda inferior recebe lado superior
+	for(auto j(1); j <= cols ; j++)
+            set_value(rows+1, j, this->grid[1][j]);
+    ///  Borda superior recebe lado inferior
+	for(auto j(1); j <= cols ; j++)
+            set_value(0, j, this->grid[rows][j]);
 }

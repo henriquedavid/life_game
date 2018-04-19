@@ -62,7 +62,7 @@ void save_file(Warehouse &ware, palavra &arquivo_saida)
     arq_saida arquivo;
 
     /// Abre o arquivo de saída.
-    arquivo.open("../data/"+arquivo_saida);
+    arquivo.open("data/"+arquivo_saida);
 
     /// Verifica se não ocorreu nenhum erro.
     if( !arquivo.is_open() ){
