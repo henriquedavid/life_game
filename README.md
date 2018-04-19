@@ -17,7 +17,7 @@ Instruções de Execução:
 - Na pasta src:
 "./exec arqEntrada arqSaida"
 ou
-- Na pasta raiz "life_game/" "./bin/release/exec data/arqEntrada arqSaida"
+- Na pasta raiz "life_game/" execute "./bin/release/exec data/arqEntrada arqSaida"
 Exemplo:
 "./bin/release/exec data/cfg1.dat out_cfg1.dat"
 
