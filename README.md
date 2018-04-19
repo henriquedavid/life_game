@@ -1,4 +1,4 @@
-#Conway's Life Game Simulator
+# Conway's Life Game Simulator
 
 Desenvolvedores:
 - Henrique David de Medeiros
