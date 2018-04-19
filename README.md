@@ -23,3 +23,4 @@ Acesso pelo GitHub:
 - Branch master -> Jogo completo e funcional, sem erros.
 - Branch sfml_version -> Versão visual, pode conter alguns erros.
 
+Os arquivos na visualização gráfica (sfml) são uma cópia dos arquivos do life_game/master(branch), porém com a adição da biblioteca SFML.
