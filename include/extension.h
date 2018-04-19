@@ -7,9 +7,8 @@ void update( Life &lf , Warehouse &wh){
 	int tamanho = wh.get_size();	// Recupera o tamanho.
 	tamanho--;
     
-    lf.bordas();
-    
 	Life last_lf = wh.get_life(tamanho);	// Recupera a última classe salva.
+    last_lf.bordas();
     
 	// Aplica a Regra 1, 2, 3, 4 e 5.
 	for( auto i(1); i < lf.get_rows()+1 ; i++ ){
@@ -45,7 +44,7 @@ void update( Life &lf , Warehouse &wh){
 		}
 	}
 
-	// Gera as bordas que ultrapassam a bordas do outro lado.
+	// carrega as bordas para os limites da grid
 	lf.load_bordas();
 
 }

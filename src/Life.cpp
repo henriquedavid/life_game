@@ -131,7 +131,7 @@ bool Life::is_extinct(){
 	return true;
 }
 
-/// Transfere os valores dos limites da grid para a borda.
+/// Transfere das bordas para os limites da grid.
 void Life::bordas()
 {
     int rows = this->rows;
@@ -155,6 +155,7 @@ void Life::bordas()
 	for(auto j(1); j <= cols ; j++)
             set_value(1, j, this->grid[rows+1][j]);
 }
+
 /// Transfere valores dos limites da grid para a borda.
 void Life::load_bordas()
 {

@@ -54,7 +54,10 @@ void readConfig(Life &lf, arq_entrada &arquivo){
 	}
 
 	valores.clear();
-	
+    
+    /// carrega os valores dos limites da grid nas bordas
+    lf.load_bordas();
+
 }
 
 /// Gera e armazena as gerações em um arquivo de saída.
