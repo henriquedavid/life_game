@@ -15,5 +15,11 @@ Instruções de Execução:
 "./exec <arqEntrada> [<arqSaida>]"
 
 O trabalho está dividindo em dois tipo:
-- execução no terminal; e
-- execução visual.
+- execução no terminal, pasta life_game; e
+- execução visual, pasta life_game_sfml.
+
+Acesso pelo GitHub:
+- Organização dos dados em branches diferentes.
+-> Branch master -> Jogo completo e funcional, sem erros.
+-> Branch sfml_version -> Versão visual, pode conter alguns erros.
+
