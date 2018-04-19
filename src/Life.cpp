@@ -1,3 +1,4 @@
+
 #include "../include/life.h"
 
 /// Construtor da classe Life.

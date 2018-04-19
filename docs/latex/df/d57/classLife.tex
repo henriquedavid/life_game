@@ -13,9 +13,9 @@ Classe que contém todos as configurações/propriedades de uma geração.
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classLife_a9c54ff69842ec7e1f6195686abd48bfc}{Life} (int n\+Lin, int n\+Col)
-\begin{DoxyCompactList}\small\item\em Contrutor padrão, sem especificar o caractere utilizado. \end{DoxyCompactList}\item 
+\item 
 \hyperlink{classLife_ab1c77136658b414aed166fb5746dd7ef}{Life} (int n\+Lin, int n\+Col, char caract)
-\begin{DoxyCompactList}\small\item\em Construtor informando as configurações básicas de uma geração. \end{DoxyCompactList}\item 
+\item 
 \hyperlink{classLife_ac5a521e06906fb4f834001b2b4f7adc7}{$\sim$\+Life} ()
 \begin{DoxyCompactList}\small\item\em Desconstrutor. \end{DoxyCompactList}\item 
 \hyperlink{classLife}{Life} \& \hyperlink{classLife_a79902e1e85146df19fb2b920899a5a36}{operator=} (const \hyperlink{classLife}{Life} \&lf)
@@ -23,9 +23,9 @@ Classe que contém todos as configurações/propriedades de uma geração.
 bool \hyperlink{classLife_a50ef5ca2efcc8053b8d54fad159722cb}{operator==} (const \hyperlink{classLife}{Life} \&lf) const
 \begin{DoxyCompactList}\small\item\em Sobrecarga do operador de igualdade, em que verifica se 2 gerações são iguais. \end{DoxyCompactList}\item 
 void \hyperlink{classLife_a4f2c49e28b51d83ea625b448ac5aa7bb}{add\+\_\+data\+\_\+vector} (std\+::vector$<$ int $>$ vetor)
-\begin{DoxyCompactList}\small\item\em Adiciona dados ao vetor da classe Grid na classe \hyperlink{classLife}{Life}. \end{DoxyCompactList}\item 
+\item 
 void \hyperlink{classLife_ae6230a18db54107b46db859424ccd4c3}{print\+\_\+data\+\_\+vector} (int numero\+\_\+geracao=1)
-\begin{DoxyCompactList}\small\item\em Imprime para o usuário como está a organização das células. \end{DoxyCompactList}\item 
+\item 
 int \hyperlink{classLife_a84991971ca97509cc769ad527f010585}{get\+\_\+value} (int x, int y)
 \item 
 void \hyperlink{classLife_a9c560e37d0fdf23e908f5f6e2caf9eab}{set\+\_\+value} (int x, int y, int value)
@@ -44,12 +44,12 @@ void \hyperlink{classLife_ad24dcdaa235aca6216718cd69e346730}{set\+\_\+caractere}
 \item 
 bool \hyperlink{classLife_a7b7cd244c2ce5b7d6ed0db9a188b2256}{is\+\_\+extinct} ()
 \item 
-void \hyperlink{classLife_a085768fbd7a228f0e4323208dbe99a0a}{set\+\_\+id} ()
-\item 
 void \hyperlink{classLife_a11daef20ad2196b79e3f944f701d8438}{save\+\_\+file} (\hyperlink{main_8cpp_a7245fe4f29fbfabfc60878ac7b3ccc0c}{palavra} filename)
 \item 
 void \hyperlink{classLife_a80aac6b6b00f8cf0589207953f3f844b}{bordas} ()
-\begin{DoxyCompactList}\small\item\em Realiza transformações para que a célula \char`\"{}continue\char`\"{} em outras bordas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Realiza transformações para que a célula \char`\"{}continue\char`\"{} em outras bordas. \end{DoxyCompactList}\item 
+void \hyperlink{classLife_a8cc497d4d07aa0d9b6b31faa14f0e12f}{load\+\_\+bordas} ()
+\begin{DoxyCompactList}\small\item\em Transfere valores dos limites da grid para a borda. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atributos Privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -75,10 +75,13 @@ Classe que contém todos as configurações/propriedades de uma geração.
 \subsubsection{\texorpdfstring{Life()}{Life()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Life\+::\+Life (\begin{DoxyParamCaption}\item[{int}]{n\+Lin = {\ttfamily 20},  }\item[{int}]{n\+Col = {\ttfamily 60} }\end{DoxyParamCaption})}
 
-
-
 Contrutor padrão, sem especificar o caractere utilizado. 
-
+\begin{DoxyParams}{Parâmetros}
+{\em quantidade} & de linhas da matriz. \\
+\hline
+{\em quantidade} & de colunas da matriz.\\
+\hline
+\end{DoxyParams}
 Construtor da classe \hyperlink{classLife}{Life}. 
 \begin{DoxyParams}{Parâmetros}
 {\em numeros} & de linhas, padrão é 20 linhas caso o usuário não informe \\
@@ -90,12 +93,26 @@ Construtor da classe \hyperlink{classLife}{Life}.
 \index{Life@{Life}!Life@{Life}}
 \index{Life@{Life}!Life@{Life}}
 \subsubsection{\texorpdfstring{Life()}{Life()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Life\+::\+Life (\begin{DoxyParamCaption}\item[{int}]{n\+Lin,  }\item[{int}]{n\+Col,  }\item[{char}]{caract }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
+{\footnotesize\ttfamily Life\+::\+Life (\begin{DoxyParamCaption}\item[{int}]{n\+Lin,  }\item[{int}]{n\+Col,  }\item[{char}]{caract }\end{DoxyParamCaption})}
 
 Construtor informando as configurações básicas de uma geração. 
-
+\begin{DoxyParams}{Parâmetros}
+{\em quantidade} & de linhas da matriz. \\
+\hline
+{\em quantidade} & de colunas da matriz. \\
+\hline
+{\em padrão} & de representação para células vivas.\\
+\hline
+\end{DoxyParams}
+Construtor da classe \hyperlink{classLife}{Life}. 
+\begin{DoxyParams}{Parâmetros}
+{\em numeros} & de linhas, padrão é 20 linhas caso o usuário não informe. \\
+\hline
+{\em numeros} & de colunas, padrão é 60 colunas caso o usuário não informe. \\
+\hline
+{\em caractere} & utilizado no arquivo para identificar uma célula viva. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classLife_ac5a521e06906fb4f834001b2b4f7adc7}\label{classLife_ac5a521e06906fb4f834001b2b4f7adc7}} 
 \index{Life@{Life}!````~Life@{$\sim$\+Life}}
 \index{````~Life@{$\sim$\+Life}!Life@{Life}}
@@ -115,16 +132,12 @@ Desconstrutor da classe \hyperlink{classLife}{Life}.
 \subsubsection{\texorpdfstring{add\+\_\+data\+\_\+vector()}{add\_data\_vector()}}
 {\footnotesize\ttfamily void Life\+::add\+\_\+data\+\_\+vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{vetor }\end{DoxyParamCaption})}
 
-
-
-Adiciona dados ao vetor da classe Grid na classe \hyperlink{classLife}{Life}. 
-
 Adiciona células no vetor grid. 
 \begin{DoxyParams}{Parâmetros}
-{\em vetor} & representando as linhas. \\
+{\em vetor} & representando as linhas.\\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classLife_a80aac6b6b00f8cf0589207953f3f844b}\label{classLife_a80aac6b6b00f8cf0589207953f3f844b}} 
+Adiciona dados ao vetor da classe Grid na classe \hyperlink{classLife}{Life}. \textbackslash{}ṕaram vetor representando linhas com elementos para formar uma matriz. \mbox{\Hypertarget{classLife_a80aac6b6b00f8cf0589207953f3f844b}\label{classLife_a80aac6b6b00f8cf0589207953f3f844b}} 
 \index{Life@{Life}!bordas@{bordas}}
 \index{bordas@{bordas}!Life@{Life}}
 \subsubsection{\texorpdfstring{bordas()}{bordas()}}
@@ -134,9 +147,13 @@ Adiciona células no vetor grid.
 
 Realiza transformações para que a célula \char`\"{}continue\char`\"{} em outras bordas. 
 
-Trata as diagonais.
+Transfere das bordas para os limites da grid. Trata as diagonais.
 
-Trata os casos em que células passam a bordar, sem estar na diagonal. \mbox{\Hypertarget{classLife_a21ada75e45a4a244eeab403fb34534fe}\label{classLife_a21ada75e45a4a244eeab403fb34534fe}} 
+Borda esquerda
+
+Borda superior
+
+Borda superior \mbox{\Hypertarget{classLife_a21ada75e45a4a244eeab403fb34534fe}\label{classLife_a21ada75e45a4a244eeab403fb34534fe}} 
 \index{Life@{Life}!get\+\_\+caractere@{get\+\_\+caractere}}
 \index{get\+\_\+caractere@{get\+\_\+caractere}!Life@{Life}}
 \subsubsection{\texorpdfstring{get\+\_\+caractere()}{get\_caractere()}}
@@ -201,7 +218,23 @@ retorno do estado da geração.
 Verificar se alguma geração está extinta. \begin{DoxyReturn}{Retorna}
 retorno do estado da geração. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classLife_a79902e1e85146df19fb2b920899a5a36}\label{classLife_a79902e1e85146df19fb2b920899a5a36}} 
+\mbox{\Hypertarget{classLife_a8cc497d4d07aa0d9b6b31faa14f0e12f}\label{classLife_a8cc497d4d07aa0d9b6b31faa14f0e12f}} 
+\index{Life@{Life}!load\+\_\+bordas@{load\+\_\+bordas}}
+\index{load\+\_\+bordas@{load\+\_\+bordas}!Life@{Life}}
+\subsubsection{\texorpdfstring{load\+\_\+bordas()}{load\_bordas()}}
+{\footnotesize\ttfamily void Life\+::load\+\_\+bordas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Transfere valores dos limites da grid para a borda. 
+
+Trata as diagonais.
+
+Borda esquerda recebe lado direito
+
+Borda inferior recebe lado superior
+
+Borda superior recebe lado inferior \mbox{\Hypertarget{classLife_a79902e1e85146df19fb2b920899a5a36}\label{classLife_a79902e1e85146df19fb2b920899a5a36}} 
 \index{Life@{Life}!operator=@{operator=}}
 \index{operator=@{operator=}!Life@{Life}}
 \subsubsection{\texorpdfstring{operator=()}{operator=()}}
@@ -226,24 +259,20 @@ Operador de atribuição da classe \hyperlink{classLife}{Life}.
 
 Sobrecarga do operador de igualdade, em que verifica se 2 gerações são iguais. 
 
-Operador de igualdade da classe life. 
-\begin{DoxyParams}{Parâmetros}
-{\em Classe} & \hyperlink{classLife}{Life}. \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{classLife_ae6230a18db54107b46db859424ccd4c3}\label{classLife_ae6230a18db54107b46db859424ccd4c3}} 
 \index{Life@{Life}!print\+\_\+data\+\_\+vector@{print\+\_\+data\+\_\+vector}}
 \index{print\+\_\+data\+\_\+vector@{print\+\_\+data\+\_\+vector}!Life@{Life}}
 \subsubsection{\texorpdfstring{print\+\_\+data\+\_\+vector()}{print\_data\_vector()}}
 {\footnotesize\ttfamily void Life\+::print\+\_\+data\+\_\+vector (\begin{DoxyParamCaption}\item[{int}]{numero\+\_\+geracao = {\ttfamily 1} }\end{DoxyParamCaption})}
 
-
-
-Imprime para o usuário como está a organização das células. 
-
 Imprime para o usuário como está a organização das células. 
 \begin{DoxyParams}{Parâmetros}
-{\em valor} & da geração que está utilizando. \\
+{\em valor} & da geração que está utilizando.\\
+\hline
+\end{DoxyParams}
+Imprime para o usuário como está a organização das células. 
+\begin{DoxyParams}{Parâmetros}
+{\em geração} & que está prestes a ser gerada. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classLife_a11daef20ad2196b79e3f944f701d8438}\label{classLife_a11daef20ad2196b79e3f944f701d8438}} 
@@ -279,12 +308,6 @@ Modificar a quantidade de colunas na classe.
 {\em quantidade} & de colunas. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classLife_a085768fbd7a228f0e4323208dbe99a0a}\label{classLife_a085768fbd7a228f0e4323208dbe99a0a}} 
-\index{Life@{Life}!set\+\_\+id@{set\+\_\+id}}
-\index{set\+\_\+id@{set\+\_\+id}!Life@{Life}}
-\subsubsection{\texorpdfstring{set\+\_\+id()}{set\_id()}}
-{\footnotesize\ttfamily void Life\+::set\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{classLife_a2a76d59604c348b77e49af72a099ba31}\label{classLife_a2a76d59604c348b77e49af72a099ba31}} 
 \index{Life@{Life}!set\+\_\+rows@{set\+\_\+rows}}
 \index{set\+\_\+rows@{set\+\_\+rows}!Life@{Life}}
@@ -307,6 +330,15 @@ Modificar valor em uma determinada posição.
 {\em número} & da linha \\
 \hline
 {\em número} & da coluna \\
+\hline
+{\em valor} & desejado que seja inserido na posição informada.\\
+\hline
+\end{DoxyParams}
+Modificar valor em uma determinada posição. 
+\begin{DoxyParams}{Parâmetros}
+{\em número} & da linha. \\
+\hline
+{\em número} & da coluna. \\
 \hline
 {\em valor} & desejado que seja inserido na posição informada. \\
 \hline
