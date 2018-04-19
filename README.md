@@ -2,8 +2,8 @@
 ### A versão desse código pode conter erros, para uma melhor análise consultar o branch master!
 
 Desenvolvedores:
-- Henrique David de Medeiros
-- Pablo Emanuell L. Targino
+- Henrique David de Medeiros (henriquemed101@gmail.com)
+- Pablo Emanuell L. Targino (pabloemanuell@academico.ufrn.br)
 
 Instruções de Compilação:
 	
@@ -15,9 +15,9 @@ ou
 Instruções de Execução:
 
 - Na pasta src:
-"./exec <arqEntrada> [<arqSaida>]"
+"./exec arqEntrada arqSaida"
 ou
-- Na pasta raiz "life_game/" "./bin/release/exec data/<arqEntrada> [<arqSaida>]"
+- Na pasta raiz "life_game/" "./bin/release/exec data/arqEntrada arqSaida"
 Exemplo:
 "./bin/release/exec data/cfg1.dat out_cfg1.dat"
 
