@@ -1,6 +1,6 @@
 # Conway's Life Game Simulator - Visual Edition
 ### DESCONSIDERAR ESTE BRANCH (sfml_version) PARA CASOS DE AVALIAÇÃO.
-### A versão desse código pode conter erros, para uma melhor análise consultar o branch master!
+### A versão desse código pode conter erros, para uma melhor análise consultar o branch [master](https://github.com/henriquedavidufrn/life_game/tree/master)!
 
 
 Desenvolvedores:
