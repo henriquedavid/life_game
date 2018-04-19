@@ -3,61 +3,98 @@
 #include <chrono>
 #include <thread>
 #include <functional>
-#include "life.h"
-#include "button.h"
+#include "../include/life.h"
+#include "../include/button.h"
+
+
 Life *game;
+
 int gen = 0;
+
 sf::Text text; // iteration count text
+
+/// Limpa as bordas
 void clear_board()
 {
     game->board->clear();
 }
+
+/// Reinicia as bordas
 void reset_board()
 {
     game->board->reset();
 }
+
+/// Atualiza as células.
 void update()
 {
     game->update();
 }
+
+/// Ação de gerar as gerações.
 void start()
 {
     std::function<void(void)> func = update;
+    
     unsigned int interval = 1000;
+    
     if(game->board->is_disable())
         return;
+    
     game->board->disable();
+    
     game->load_from_board();
+    
     std::thread([func, interval]() {
+    
         while (game->board->is_disable())
         {
+
             std::this_thread::sleep_for(std::chrono::milliseconds(interval));
+            
             func();
+            
             if(game->is_extinct()){
                 text.setString("Extinct at gen " + std::to_string(gen));
                 break;
             }
-//             if(game->is_stable()){
-//                 text.setString("Stable at gen " + std::to_string(gen));
-//                 break;
-//             }
+            
+                    // if(game->is_stable()){
+                    // text.setString("Stable at gen " + std::to_string(gen));
+                    //break;
+                    //}
+            
             gen++;
+            
             if(!game->board->is_disable()) // extra verification, cause the stop button may be pressed
                 break;
+            
             text.setString("Generation: " + std::to_string(gen));
+        
         }
+    
     }).detach();
+    
     return;
 }
+
+/// Ação de parar a geração e volta para a original.
 void stop()
 {
+
     if(!game->board->is_disable())
         return;
+
     game->clear_ids();
+
     game->board->enable();
+
     game->board->reset();
+
     text.setString("Generation: 0");
+
     gen = 0;
+
     return;
 }
 
@@ -78,45 +115,68 @@ int main(int argc, char* argv[])
     else {
             game = new Life(argv[1]);
     }
-    // load config
+    // Load config
     
     int rows = game->get_rows();
+
     int cols = game->get_columns();
+
+    
     size_t margin = game->board->get_margin();
+    
     size_t size = game->board->get_quad_size();
+    
     // general variables
     size_t window_width = cols*size+cols*margin;
     size_t window_height = rows*size+rows*margin+80;
+    
     // window elements
+    
     sf::Font font;
+    
     font.loadFromFile("font/arial.ttf");
+    
     text.setFont(font);
+    
     text.setFillColor(sf::Color::White);
+    
     text.setCharacterSize(20);
+    
     text.setPosition(10, window_height-75);
+    
     text.setString("Generation: 0");
+    
     Button bt("Start", sf::Vector2f(10, window_height-40), 25, &start);
+    
     Button bt2("Stop", sf::Vector2f(bt.getRightX() + 10, window_height-40), 25, &stop);
+    
     if(bt2.getRightX() > window_width + 2)
     {
         window_height += 35;
         bt2.move(-bt.getRightX(), 35);
     }
+    
     Button bt3("Reset", sf::Vector2f(bt2.getRightX() + 10, window_height-40), 25, &reset_board);
+    
     if(bt3.getRightX() > window_width + 2)
     {
         window_height += 35;
         bt3.move(-bt2.getRightX(), 35);
     }
+    
     Button bt4("Clear", sf::Vector2f(bt3.getRightX() + 10, window_height-40), 25, &clear_board);
+    
     if(bt4.getRightX() > window_width + 2)
     {
         window_height += 35;
         bt4.move(-bt3.getRightX(), 35);
     }
+    
     // window config
-	sf::RenderWindow window(sf::VideoMode(window_width, window_height), "John Conway's Game of Life", sf::Style::Titlebar + sf::Style::Close);
-	while (window.isOpen())
+	
+    sf::RenderWindow window(sf::VideoMode(window_width, window_height), "John Conway's Game of Life", sf::Style::Titlebar + sf::Style::Close);
+	
+    while (window.isOpen())
 	{
 		sf::Event e;
 		while (window.pollEvent(e))

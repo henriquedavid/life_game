@@ -1,4 +1,4 @@
-#include "life.h"
+#include "../include/life.h"
 
 Life::Life(int rows, int cols)
 {
