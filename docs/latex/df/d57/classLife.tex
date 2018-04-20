@@ -1,0 +1,368 @@
+\hypertarget{classLife}{}\section{Referência à classe Life}
+\label{classLife}\index{Life@{Life}}
+
+
+{\ttfamily \#include $<$life.\+h$>$}
+
+
+
+Diagrama de colaboração para Life\+:
+% FIG 0
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLife_a240039599d8a70206d1047e947eb5a24}{Life} (int \hyperlink{classLife_ab4d1ea4344ba31a4686f388edb7e2927}{rows}=20, int \hyperlink{classLife_a31a428734f7dc76ca386963139699ac6}{cols}=60)
+\begin{DoxyCompactList}\small\item\em construtor \end{DoxyCompactList}\item 
+\hyperlink{classLife_a7bd6ea2ee09bf001bbbd58c6eef26e24}{Life} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em construtor \end{DoxyCompactList}\item 
+\hyperlink{classLife_ac5a521e06906fb4f834001b2b4f7adc7}{$\sim$\+Life} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+\hyperlink{classLife}{Life} \& \hyperlink{classLife_a79902e1e85146df19fb2b920899a5a36}{operator=} (const \hyperlink{classLife}{Life} \&lf)
+\begin{DoxyCompactList}\small\item\em = operator overload \end{DoxyCompactList}\item 
+bool \hyperlink{classLife_ae0d444c42adbb8784684f2a9ef008bcb}{operator==} (std\+::vector$<$ int $>$ \hyperlink{classLife_ab33d6ee162673a71742a3df07a0a2e2f}{id}) const
+\begin{DoxyCompactList}\small\item\em == operator overload \end{DoxyCompactList}\item 
+void \hyperlink{classLife_a0e00f2735584f3ddebb397742b520d3b}{update} ()
+\begin{DoxyCompactList}\small\item\em update board grid \end{DoxyCompactList}\item 
+void \hyperlink{classLife_a17e8f25c5f814ee868ef3f943c9dddcd}{load\+\_\+from\+\_\+board} ()
+\begin{DoxyCompactList}\small\item\em load cell grid from board quads state \end{DoxyCompactList}\item 
+\hyperlink{life_8h_a0133c02dfc35ffbaf07ad1a587dac4d1}{Cell} \hyperlink{classLife_a3beeb3680b687283d2db135650e690bf}{get\+\_\+value} (int x, int y)
+\item 
+void \hyperlink{classLife_a5f6a86de4c6db6d1b70b507cee58a54f}{set\+\_\+value} (int x, int y, \hyperlink{life_8h_a0133c02dfc35ffbaf07ad1a587dac4d1}{Cell} value)
+\item 
+int \hyperlink{classLife_ae4a3608385b8435f55102c89363d6e26}{get\+\_\+rows} ()
+\begin{DoxyCompactList}\small\item\em get number of rows \end{DoxyCompactList}\item 
+int \hyperlink{classLife_ac82f1ba83db36b3142ec12c2fc334de3}{get\+\_\+columns} ()
+\begin{DoxyCompactList}\small\item\em get number of columns \end{DoxyCompactList}\item 
+bool \hyperlink{classLife_a7b7cd244c2ce5b7d6ed0db9a188b2256}{is\+\_\+extinct} ()
+\item 
+bool \hyperlink{classLife_a773454947fcc1f7c576c8749647d9ba2}{is\+\_\+stable} ()
+\item 
+void \hyperlink{classLife_ac79ef6f9e91fd76fc9d1906cfc2b34ee}{clear\+\_\+ids} ()
+\begin{DoxyCompactList}\small\item\em clear ids matrix \end{DoxyCompactList}\item 
+void \hyperlink{classLife_a085768fbd7a228f0e4323208dbe99a0a}{set\+\_\+id} ()
+\begin{DoxyCompactList}\small\item\em create id vector \end{DoxyCompactList}\item 
+void \hyperlink{classLife_a80aac6b6b00f8cf0589207953f3f844b}{bordas} ()
+\begin{DoxyCompactList}\small\item\em set all bords \end{DoxyCompactList}\item 
+void \hyperlink{classLife_a8cc497d4d07aa0d9b6b31faa14f0e12f}{load\+\_\+bordas} ()
+\begin{DoxyCompactList}\small\item\em load bords at cell area \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQuadBoard}{Quad\+Board} $\ast$ \hyperlink{classLife_a8a6ccc5c3099a9007d7b2ec22402e6cb}{board}
+\begin{DoxyCompactList}\small\item\em board that will show the grid \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classLife_a8598dfc9e71062fc3e7345a2a86015cc}{init} (int \hyperlink{classLife_ab4d1ea4344ba31a4686f388edb7e2927}{rows}, int \hyperlink{classLife_a31a428734f7dc76ca386963139699ac6}{cols})
+\begin{DoxyCompactList}\small\item\em initialize object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \hyperlink{life_8h_a0133c02dfc35ffbaf07ad1a587dac4d1}{Cell} $>$ $>$ \hyperlink{classLife_aa83b518c319016fa8f962d24a6e487a6}{grid}
+\begin{DoxyCompactList}\small\item\em stores the cells \end{DoxyCompactList}\item 
+int \hyperlink{classLife_ab4d1ea4344ba31a4686f388edb7e2927}{rows}
+\begin{DoxyCompactList}\small\item\em height of the grid \end{DoxyCompactList}\item 
+int \hyperlink{classLife_a31a428734f7dc76ca386963139699ac6}{cols}
+\begin{DoxyCompactList}\small\item\em width of the grid \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{classLife_ab33d6ee162673a71742a3df07a0a2e2f}{id}
+\begin{DoxyCompactList}\small\item\em id to identify grid \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \hyperlink{classLife_a9b8514842a22ce3d280e9e576a149dab}{ids}
+\begin{DoxyCompactList}\small\item\em ids historic \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classLife_a240039599d8a70206d1047e947eb5a24}\label{classLife_a240039599d8a70206d1047e947eb5a24}} 
+\index{Life@{Life}!Life@{Life}}
+\index{Life@{Life}!Life@{Life}}
+\subsubsection{\texorpdfstring{Life()}{Life()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Life\+::\+Life (\begin{DoxyParamCaption}\item[{int}]{rows = {\ttfamily 20},  }\item[{int}]{cols = {\ttfamily 60} }\end{DoxyParamCaption})}
+
+
+
+construtor 
+
+initiaze object \mbox{\Hypertarget{classLife_a7bd6ea2ee09bf001bbbd58c6eef26e24}\label{classLife_a7bd6ea2ee09bf001bbbd58c6eef26e24}} 
+\index{Life@{Life}!Life@{Life}}
+\index{Life@{Life}!Life@{Life}}
+\subsubsection{\texorpdfstring{Life()}{Life()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Life\+::\+Life (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+construtor 
+
+\mbox{\Hypertarget{classLife_ac5a521e06906fb4f834001b2b4f7adc7}\label{classLife_ac5a521e06906fb4f834001b2b4f7adc7}} 
+\index{Life@{Life}!````~Life@{$\sim$\+Life}}
+\index{````~Life@{$\sim$\+Life}!Life@{Life}}
+\subsubsection{\texorpdfstring{$\sim$\+Life()}{~Life()}}
+{\footnotesize\ttfamily Life\+::$\sim$\+Life (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destructor 
+
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classLife_a80aac6b6b00f8cf0589207953f3f844b}\label{classLife_a80aac6b6b00f8cf0589207953f3f844b}} 
+\index{Life@{Life}!bordas@{bordas}}
+\index{bordas@{bordas}!Life@{Life}}
+\subsubsection{\texorpdfstring{bordas()}{bordas()}}
+{\footnotesize\ttfamily void Life\+::bordas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+set all bords 
+
+Transfere os valores dos limites da grid para a borda. Trata as diagonais.
+
+Borda esquerda
+
+Borda superior
+
+Borda superior \mbox{\Hypertarget{classLife_ac79ef6f9e91fd76fc9d1906cfc2b34ee}\label{classLife_ac79ef6f9e91fd76fc9d1906cfc2b34ee}} 
+\index{Life@{Life}!clear\+\_\+ids@{clear\+\_\+ids}}
+\index{clear\+\_\+ids@{clear\+\_\+ids}!Life@{Life}}
+\subsubsection{\texorpdfstring{clear\+\_\+ids()}{clear\_ids()}}
+{\footnotesize\ttfamily void Life\+::clear\+\_\+ids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+clear ids matrix 
+
+\mbox{\Hypertarget{classLife_ac82f1ba83db36b3142ec12c2fc334de3}\label{classLife_ac82f1ba83db36b3142ec12c2fc334de3}} 
+\index{Life@{Life}!get\+\_\+columns@{get\+\_\+columns}}
+\index{get\+\_\+columns@{get\+\_\+columns}!Life@{Life}}
+\subsubsection{\texorpdfstring{get\+\_\+columns()}{get\_columns()}}
+{\footnotesize\ttfamily int Life\+::get\+\_\+columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get number of columns 
+
+\mbox{\Hypertarget{classLife_ae4a3608385b8435f55102c89363d6e26}\label{classLife_ae4a3608385b8435f55102c89363d6e26}} 
+\index{Life@{Life}!get\+\_\+rows@{get\+\_\+rows}}
+\index{get\+\_\+rows@{get\+\_\+rows}!Life@{Life}}
+\subsubsection{\texorpdfstring{get\+\_\+rows()}{get\_rows()}}
+{\footnotesize\ttfamily int Life\+::get\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get number of rows 
+
+\mbox{\Hypertarget{classLife_a3beeb3680b687283d2db135650e690bf}\label{classLife_a3beeb3680b687283d2db135650e690bf}} 
+\index{Life@{Life}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!Life@{Life}}
+\subsubsection{\texorpdfstring{get\+\_\+value()}{get\_value()}}
+{\footnotesize\ttfamily \hyperlink{life_8h_a0133c02dfc35ffbaf07ad1a587dac4d1}{Cell} Life\+::get\+\_\+value (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+get value of cell at (x, y) 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & number of rows \\
+\hline
+{\em y} & number of columns \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cell value at (x, y) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLife_a8598dfc9e71062fc3e7345a2a86015cc}\label{classLife_a8598dfc9e71062fc3e7345a2a86015cc}} 
+\index{Life@{Life}!init@{init}}
+\index{init@{init}!Life@{Life}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Life\+::init (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+initialize object 
+
+\mbox{\Hypertarget{classLife_a7b7cd244c2ce5b7d6ed0db9a188b2256}\label{classLife_a7b7cd244c2ce5b7d6ed0db9a188b2256}} 
+\index{Life@{Life}!is\+\_\+extinct@{is\+\_\+extinct}}
+\index{is\+\_\+extinct@{is\+\_\+extinct}!Life@{Life}}
+\subsubsection{\texorpdfstring{is\+\_\+extinct()}{is\_extinct()}}
+{\footnotesize\ttfamily bool Life\+::is\+\_\+extinct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if cells are extinct \begin{DoxyReturn}{Retorna}
+true if cells are extinct; or false othewise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLife_a773454947fcc1f7c576c8749647d9ba2}\label{classLife_a773454947fcc1f7c576c8749647d9ba2}} 
+\index{Life@{Life}!is\+\_\+stable@{is\+\_\+stable}}
+\index{is\+\_\+stable@{is\+\_\+stable}!Life@{Life}}
+\subsubsection{\texorpdfstring{is\+\_\+stable()}{is\_stable()}}
+{\footnotesize\ttfamily bool Life\+::is\+\_\+stable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if cells are stable \begin{DoxyReturn}{Retorna}
+true if cells are stable; or false othewise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLife_a8cc497d4d07aa0d9b6b31faa14f0e12f}\label{classLife_a8cc497d4d07aa0d9b6b31faa14f0e12f}} 
+\index{Life@{Life}!load\+\_\+bordas@{load\+\_\+bordas}}
+\index{load\+\_\+bordas@{load\+\_\+bordas}!Life@{Life}}
+\subsubsection{\texorpdfstring{load\+\_\+bordas()}{load\_bordas()}}
+{\footnotesize\ttfamily void Life\+::load\+\_\+bordas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+load bords at cell area 
+
+Transfere valores dos limites da grid para a borda. Trata as diagonais.
+
+Borda esquerda recebe lado direito
+
+Borda inferior recebe lado superior
+
+Borda superior recebe lado inferior \mbox{\Hypertarget{classLife_a17e8f25c5f814ee868ef3f943c9dddcd}\label{classLife_a17e8f25c5f814ee868ef3f943c9dddcd}} 
+\index{Life@{Life}!load\+\_\+from\+\_\+board@{load\+\_\+from\+\_\+board}}
+\index{load\+\_\+from\+\_\+board@{load\+\_\+from\+\_\+board}!Life@{Life}}
+\subsubsection{\texorpdfstring{load\+\_\+from\+\_\+board()}{load\_from\_board()}}
+{\footnotesize\ttfamily void Life\+::load\+\_\+from\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+load cell grid from board quads state 
+
+\mbox{\Hypertarget{classLife_a79902e1e85146df19fb2b920899a5a36}\label{classLife_a79902e1e85146df19fb2b920899a5a36}} 
+\index{Life@{Life}!operator=@{operator=}}
+\index{operator=@{operator=}!Life@{Life}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classLife}{Life} \& Life\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classLife}{Life} \&}]{lf }\end{DoxyParamCaption})}
+
+
+
+= operator overload 
+
+!
+
+$\vert$ copy proprieties
+
+resize height
+
+resize width
+
+set Cell value \mbox{\Hypertarget{classLife_ae0d444c42adbb8784684f2a9ef008bcb}\label{classLife_ae0d444c42adbb8784684f2a9ef008bcb}} 
+\index{Life@{Life}!operator==@{operator==}}
+\index{operator==@{operator==}!Life@{Life}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Life\+::operator== (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{id }\end{DoxyParamCaption}) const}
+
+
+
+== operator overload 
+
+elements\+: number of distances, distance\+\_\+1, ..., distance\+\_\+n
+
+if the sizes are different the loop will break at first time
+
+different data \mbox{\Hypertarget{classLife_a085768fbd7a228f0e4323208dbe99a0a}\label{classLife_a085768fbd7a228f0e4323208dbe99a0a}} 
+\index{Life@{Life}!set\+\_\+id@{set\+\_\+id}}
+\index{set\+\_\+id@{set\+\_\+id}!Life@{Life}}
+\subsubsection{\texorpdfstring{set\+\_\+id()}{set\_id()}}
+{\footnotesize\ttfamily void Life\+::set\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create id vector 
+
+percorre cada linha
+
+percorre as colunas
+
+store distance
+
+increase distance count
+
+reset distance
+
+increase distance count \mbox{\Hypertarget{classLife_a5f6a86de4c6db6d1b70b507cee58a54f}\label{classLife_a5f6a86de4c6db6d1b70b507cee58a54f}} 
+\index{Life@{Life}!set\+\_\+value@{set\+\_\+value}}
+\index{set\+\_\+value@{set\+\_\+value}!Life@{Life}}
+\subsubsection{\texorpdfstring{set\+\_\+value()}{set\_value()}}
+{\footnotesize\ttfamily void Life\+::set\+\_\+value (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\hyperlink{life_8h_a0133c02dfc35ffbaf07ad1a587dac4d1}{Cell}}]{value }\end{DoxyParamCaption})}
+
+set value of cell at (x, y) 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & number of rows \\
+\hline
+{\em y} & number of columns \\
+\hline
+{\em value} & Cell value at (x, y) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLife_a0e00f2735584f3ddebb397742b520d3b}\label{classLife_a0e00f2735584f3ddebb397742b520d3b}} 
+\index{Life@{Life}!update@{update}}
+\index{update@{update}!Life@{Life}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Life\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+update board grid 
+
+update grid 
+
+\subsection{Documentação dos dados membro}
+\mbox{\Hypertarget{classLife_a8a6ccc5c3099a9007d7b2ec22402e6cb}\label{classLife_a8a6ccc5c3099a9007d7b2ec22402e6cb}} 
+\index{Life@{Life}!board@{board}}
+\index{board@{board}!Life@{Life}}
+\subsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily \hyperlink{classQuadBoard}{Quad\+Board}$\ast$ Life\+::board}
+
+
+
+board that will show the grid 
+
+\mbox{\Hypertarget{classLife_a31a428734f7dc76ca386963139699ac6}\label{classLife_a31a428734f7dc76ca386963139699ac6}} 
+\index{Life@{Life}!cols@{cols}}
+\index{cols@{cols}!Life@{Life}}
+\subsubsection{\texorpdfstring{cols}{cols}}
+{\footnotesize\ttfamily int Life\+::cols\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+width of the grid 
+
+\mbox{\Hypertarget{classLife_aa83b518c319016fa8f962d24a6e487a6}\label{classLife_aa83b518c319016fa8f962d24a6e487a6}} 
+\index{Life@{Life}!grid@{grid}}
+\index{grid@{grid}!Life@{Life}}
+\subsubsection{\texorpdfstring{grid}{grid}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\hyperlink{life_8h_a0133c02dfc35ffbaf07ad1a587dac4d1}{Cell}$>$ $>$ Life\+::grid\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+stores the cells 
+
+\mbox{\Hypertarget{classLife_ab33d6ee162673a71742a3df07a0a2e2f}\label{classLife_ab33d6ee162673a71742a3df07a0a2e2f}} 
+\index{Life@{Life}!id@{id}}
+\index{id@{id}!Life@{Life}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Life\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+id to identify grid 
+
+\mbox{\Hypertarget{classLife_a9b8514842a22ce3d280e9e576a149dab}\label{classLife_a9b8514842a22ce3d280e9e576a149dab}} 
+\index{Life@{Life}!ids@{ids}}
+\index{ids@{ids}!Life@{Life}}
+\subsubsection{\texorpdfstring{ids}{ids}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$int$>$ $>$ Life\+::ids\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ids historic 
+
+\mbox{\Hypertarget{classLife_ab4d1ea4344ba31a4686f388edb7e2927}\label{classLife_ab4d1ea4344ba31a4686f388edb7e2927}} 
+\index{Life@{Life}!rows@{rows}}
+\index{rows@{rows}!Life@{Life}}
+\subsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily int Life\+::rows\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+height of the grid 
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+/home/pablo/\+Documentos/projetos/life\+\_\+game\+\_\+sfml/include/\hyperlink{life_8h}{life.\+h}\item 
+/home/pablo/\+Documentos/projetos/life\+\_\+game\+\_\+sfml/src/\hyperlink{life_8cpp}{life.\+cpp}\end{DoxyCompactItemize}

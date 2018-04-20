@@ -1,0 +1,141 @@
+\hypertarget{main_8cpp}{}\section{Referência ao ficheiro /home/pablo/\+Documentos/projetos/life\+\_\+game\+\_\+sfml/src/main.cpp}
+\label{main_8cpp}\index{/home/pablo/\+Documentos/projetos/life\+\_\+game\+\_\+sfml/src/main.\+cpp@{/home/pablo/\+Documentos/projetos/life\+\_\+game\+\_\+sfml/src/main.\+cpp}}
+{\ttfamily \#include $<$S\+F\+M\+L/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include \char`\"{}life.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}button.\+h\char`\"{}}\newline
+Diagrama de dependências de inclusão para main.\+cpp\+:
+% FIG 0
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a8d7d10670b068d9043154c0731b126d4}{clear\+\_\+board} ()
+\begin{DoxyCompactList}\small\item\em Genetation count text. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_ae0db5241406c25c27e4a153b3953cd56}{reset\+\_\+board} ()
+\item 
+void \hyperlink{main_8cpp_ac5c54df7ed3b930268c8d7752c101725}{update} ()
+\item 
+void \hyperlink{main_8cpp_a60de64d75454385b23995437f1d72669}{start} ()
+\item 
+void \hyperlink{main_8cpp_a8c528baf37154d347366083f0f816846}{stop} ()
+\begin{DoxyCompactList}\small\item\em return to the initial state \end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em driver function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLife}{Life} $\ast$ \hyperlink{main_8cpp_a27f9f462c1a9e4cbebf5aa5fc7cef710}{game}
+\item 
+int \hyperlink{main_8cpp_ae1347f132b1e1f49954e3948caea00b4}{gen} = 0
+\begin{DoxyCompactList}\small\item\em global game instance. \end{DoxyCompactList}\item 
+sf\+::\+Text \hyperlink{main_8cpp_a6d372f7ea1f537bfbc73492e24ef8623}{text}
+\begin{DoxyCompactList}\small\item\em Genetation count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{main_8cpp_a8d7d10670b068d9043154c0731b126d4}\label{main_8cpp_a8d7d10670b068d9043154c0731b126d4}} 
+\index{main.\+cpp@{main.\+cpp}!clear\+\_\+board@{clear\+\_\+board}}
+\index{clear\+\_\+board@{clear\+\_\+board}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{clear\+\_\+board()}{clear\_board()}}
+{\footnotesize\ttfamily void clear\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Genetation count text. 
+
+Actions for \hyperlink{classButton}{Button} pressed event \mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+driver function 
+
+check command syntax
+
+check is the size was passed cainstead a file
+
+load config into scope variables
+
+reposition the buttons if necessary.
+
+main window draw loop
+
+event prossessing
+
+check if button close was pressed
+
+pass the event to the window elements
+
+show all elements in the window \mbox{\Hypertarget{main_8cpp_ae0db5241406c25c27e4a153b3953cd56}\label{main_8cpp_ae0db5241406c25c27e4a153b3953cd56}} 
+\index{main.\+cpp@{main.\+cpp}!reset\+\_\+board@{reset\+\_\+board}}
+\index{reset\+\_\+board@{reset\+\_\+board}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{reset\+\_\+board()}{reset\_board()}}
+{\footnotesize\ttfamily void reset\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a60de64d75454385b23995437f1d72669}\label{main_8cpp_a60de64d75454385b23995437f1d72669}} 
+\index{main.\+cpp@{main.\+cpp}!start@{start}}
+\index{start@{start}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+set function reference
+
+if the board os desable, the thread is already runnig.
+
+inicialize the update thread
+
+wait interval
+
+call update function
+
+count and print genaration \mbox{\Hypertarget{main_8cpp_a8c528baf37154d347366083f0f816846}\label{main_8cpp_a8c528baf37154d347366083f0f816846}} 
+\index{main.\+cpp@{main.\+cpp}!stop@{stop}}
+\index{stop@{stop}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return to the initial state 
+
+\mbox{\Hypertarget{main_8cpp_ac5c54df7ed3b930268c8d7752c101725}\label{main_8cpp_ac5c54df7ed3b930268c8d7752c101725}} 
+\index{main.\+cpp@{main.\+cpp}!update@{update}}
+\index{update@{update}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Documentação das variáveis}
+\mbox{\Hypertarget{main_8cpp_a27f9f462c1a9e4cbebf5aa5fc7cef710}\label{main_8cpp_a27f9f462c1a9e4cbebf5aa5fc7cef710}} 
+\index{main.\+cpp@{main.\+cpp}!game@{game}}
+\index{game@{game}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily \hyperlink{classLife}{Life}$\ast$ game}
+
+\mbox{\Hypertarget{main_8cpp_ae1347f132b1e1f49954e3948caea00b4}\label{main_8cpp_ae1347f132b1e1f49954e3948caea00b4}} 
+\index{main.\+cpp@{main.\+cpp}!gen@{gen}}
+\index{gen@{gen}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{gen}{gen}}
+{\footnotesize\ttfamily int gen = 0}
+
+
+
+global game instance. 
+
+\mbox{\Hypertarget{main_8cpp_a6d372f7ea1f537bfbc73492e24ef8623}\label{main_8cpp_a6d372f7ea1f537bfbc73492e24ef8623}} 
+\index{main.\+cpp@{main.\+cpp}!text@{text}}
+\index{text@{text}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily sf\+::\+Text text}
+
+
+
+Genetation count. 
+

@@ -1,0 +1,245 @@
+\hypertarget{classButton}{}\section{Referência à classe Button}
+\label{classButton}\index{Button@{Button}}
+
+
+A generic S\+F\+ML \hyperlink{classButton}{Button}.  
+
+
+
+
+{\ttfamily \#include $<$button.\+h$>$}
+
+
+
+Diagrama de heranças da classe Button
+% FIG 0
+
+
+Diagrama de colaboração para Button\+:
+% FIG 1
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classButton_a3f6796e5e92c8a69a2288e01a8996078}{Button} (std\+::string textstr, const sf\+::\+Vector2f \&\hyperlink{classButton_afd3823c96d76e1152fda9fc080f45b01}{position}, size\+\_\+t height, void($\ast$\hyperlink{classButton_ae9295b79451566476a9d2e563d0e7ce2}{on\+\_\+press})(), sf\+::\+Color default\+\_\+color=sf\+::\+Color(200, 200, 200))
+\item 
+unsigned int \hyperlink{classButton_a1bc1735913f9fa01531f10c2a30f0202}{get\+RightX} ()
+\begin{DoxyCompactList}\small\item\em x\+\_\+axis maximum of the button area \end{DoxyCompactList}\item 
+void \hyperlink{classButton_ab6b0888289d2b733a1e1066578aac900}{move} (int rx, int ry)
+\begin{DoxyCompactList}\small\item\em relative move \end{DoxyCompactList}\item 
+void \hyperlink{classButton_aaf2f85db7d93b19783f9e859ad58e185}{update} (sf\+::\+Event \&e)
+\begin{DoxyCompactList}\small\item\em update state \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classButton_a13280eb9f2786fd2597fd3b9c9c5c858}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+\begin{DoxyCompactList}\small\item\em draw methode of \hyperlink{classButton}{Button}. Check the S\+F\+ML Documentation \end{DoxyCompactList}\item 
+void \hyperlink{classButton_af1464b95c6e43e125904b46670272ed2}{press} ()
+\begin{DoxyCompactList}\small\item\em press event \end{DoxyCompactList}\item 
+void \hyperlink{classButton_a1a5ca19ed8efe0ea27625217dcab9f2c}{hover} ()
+\begin{DoxyCompactList}\small\item\em hover event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Rectangle\+Shape \hyperlink{classButton_a8d1ded1e184e2495c36160c885574a1c}{rect}
+\begin{DoxyCompactList}\small\item\em background rectangle \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \hyperlink{classButton_afd3823c96d76e1152fda9fc080f45b01}{position}
+\begin{DoxyCompactList}\small\item\em poosition vector \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \hyperlink{classButton_ae2858ccb82273767d44ec2bc952dd07c}{size}
+\begin{DoxyCompactList}\small\item\em size vector \end{DoxyCompactList}\item 
+sf\+::\+Font \hyperlink{classButton_ab6290d275363f4b0e133eec450845ca1}{font}
+\begin{DoxyCompactList}\small\item\em used font \end{DoxyCompactList}\item 
+sf\+::\+Text \hyperlink{classButton_aadf908b0777f2ae5c28d949fda3384c1}{text}
+\begin{DoxyCompactList}\small\item\em text of the button \end{DoxyCompactList}\item 
+void($\ast$ \hyperlink{classButton_ae9295b79451566476a9d2e563d0e7ce2}{on\+\_\+press} )()
+\begin{DoxyCompactList}\small\item\em on\+\_\+press action function \end{DoxyCompactList}\item 
+\hyperlink{button_8h_a40b271baa2a62e00c1925f51d7698146}{B\+T\+\_\+\+S\+T\+A\+TE} \hyperlink{classButton_aa405a1238e29323bbdcf1c08f83d3f0f}{state}
+\begin{DoxyCompactList}\small\item\em state of the button \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+A generic S\+F\+ML \hyperlink{classButton}{Button}. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classButton_a3f6796e5e92c8a69a2288e01a8996078}\label{classButton_a3f6796e5e92c8a69a2288e01a8996078}} 
+\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\subsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}\item[{std\+::string}]{textstr,  }\item[{const sf\+::\+Vector2f \&}]{position,  }\item[{size\+\_\+t}]{height,  }\item[{void($\ast$)()}]{on\+\_\+press,  }\item[{sf\+::\+Color}]{default\+\_\+color = {\ttfamily sf\+:\+:Color(200,~200,~200)} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em textstr} & button text \\
+\hline
+{\em position} & position (x, y) vector \\
+\hline
+{\em height} & height of the button \\
+\hline
+{\em on\+\_\+press} & fuction that will be called whe button is pressed \\
+\hline
+{\em default\+\_\+color} & background button color \\
+\hline
+\end{DoxyParams}
+text config
+
+rectangle config
+
+others configs 
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classButton_a13280eb9f2786fd2597fd3b9c9c5c858}\label{classButton_a13280eb9f2786fd2597fd3b9c9c5c858}} 
+\index{Button@{Button}!draw@{draw}}
+\index{draw@{draw}!Button@{Button}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Button\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+draw methode of \hyperlink{classButton}{Button}. Check the S\+F\+ML Documentation 
+
+\mbox{\Hypertarget{classButton_a1bc1735913f9fa01531f10c2a30f0202}\label{classButton_a1bc1735913f9fa01531f10c2a30f0202}} 
+\index{Button@{Button}!get\+RightX@{get\+RightX}}
+\index{get\+RightX@{get\+RightX}!Button@{Button}}
+\subsubsection{\texorpdfstring{get\+Right\+X()}{getRightX()}}
+{\footnotesize\ttfamily unsigned int Button\+::get\+RightX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+x\+\_\+axis maximum of the button area 
+
+\begin{DoxyReturn}{Retorna}
+x\+\_\+axis maximum of the button area 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classButton_a1a5ca19ed8efe0ea27625217dcab9f2c}\label{classButton_a1a5ca19ed8efe0ea27625217dcab9f2c}} 
+\index{Button@{Button}!hover@{hover}}
+\index{hover@{hover}!Button@{Button}}
+\subsubsection{\texorpdfstring{hover()}{hover()}}
+{\footnotesize\ttfamily void Button\+::hover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+hover event 
+
+\mbox{\Hypertarget{classButton_ab6b0888289d2b733a1e1066578aac900}\label{classButton_ab6b0888289d2b733a1e1066578aac900}} 
+\index{Button@{Button}!move@{move}}
+\index{move@{move}!Button@{Button}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Button\+::move (\begin{DoxyParamCaption}\item[{int}]{rx,  }\item[{int}]{ry }\end{DoxyParamCaption})}
+
+
+
+relative move 
+
+relative move 
+\begin{DoxyParams}{Parâmetros}
+{\em rx} & x\+\_\+axis difference of old and new position \\
+\hline
+{\em ry} & y\+\_\+axis difference of old and new position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classButton_af1464b95c6e43e125904b46670272ed2}\label{classButton_af1464b95c6e43e125904b46670272ed2}} 
+\index{Button@{Button}!press@{press}}
+\index{press@{press}!Button@{Button}}
+\subsubsection{\texorpdfstring{press()}{press()}}
+{\footnotesize\ttfamily void Button\+::press (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+press event 
+
+button pressed \mbox{\Hypertarget{classButton_aaf2f85db7d93b19783f9e859ad58e185}\label{classButton_aaf2f85db7d93b19783f9e859ad58e185}} 
+\index{Button@{Button}!update@{update}}
+\index{update@{update}!Button@{Button}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Button\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{e }\end{DoxyParamCaption})}
+
+
+
+update state 
+
+if the button is already desable, return
+
+check if the mouse is over button
+
+check the distance of the mouse and button
+
+if mouse is outside of button area and button state is B\+T\+\_\+\+H\+O\+V\+ER, change its state to E\+N\+A\+B\+LE and return
+
+change color 
+
+\subsection{Documentação dos dados membro}
+\mbox{\Hypertarget{classButton_ab6290d275363f4b0e133eec450845ca1}\label{classButton_ab6290d275363f4b0e133eec450845ca1}} 
+\index{Button@{Button}!font@{font}}
+\index{font@{font}!Button@{Button}}
+\subsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily sf\+::\+Font Button\+::font\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+used font 
+
+\mbox{\Hypertarget{classButton_ae9295b79451566476a9d2e563d0e7ce2}\label{classButton_ae9295b79451566476a9d2e563d0e7ce2}} 
+\index{Button@{Button}!on\+\_\+press@{on\+\_\+press}}
+\index{on\+\_\+press@{on\+\_\+press}!Button@{Button}}
+\subsubsection{\texorpdfstring{on\+\_\+press}{on\_press}}
+{\footnotesize\ttfamily void($\ast$ Button\+::on\+\_\+press) ()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+on\+\_\+press action function 
+
+\mbox{\Hypertarget{classButton_afd3823c96d76e1152fda9fc080f45b01}\label{classButton_afd3823c96d76e1152fda9fc080f45b01}} 
+\index{Button@{Button}!position@{position}}
+\index{position@{position}!Button@{Button}}
+\subsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Button\+::position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+poosition vector 
+
+\mbox{\Hypertarget{classButton_a8d1ded1e184e2495c36160c885574a1c}\label{classButton_a8d1ded1e184e2495c36160c885574a1c}} 
+\index{Button@{Button}!rect@{rect}}
+\index{rect@{rect}!Button@{Button}}
+\subsubsection{\texorpdfstring{rect}{rect}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Button\+::rect\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+background rectangle 
+
+\mbox{\Hypertarget{classButton_ae2858ccb82273767d44ec2bc952dd07c}\label{classButton_ae2858ccb82273767d44ec2bc952dd07c}} 
+\index{Button@{Button}!size@{size}}
+\index{size@{size}!Button@{Button}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Button\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+size vector 
+
+\mbox{\Hypertarget{classButton_aa405a1238e29323bbdcf1c08f83d3f0f}\label{classButton_aa405a1238e29323bbdcf1c08f83d3f0f}} 
+\index{Button@{Button}!state@{state}}
+\index{state@{state}!Button@{Button}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \hyperlink{button_8h_a40b271baa2a62e00c1925f51d7698146}{B\+T\+\_\+\+S\+T\+A\+TE} Button\+::state\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+state of the button 
+
+\mbox{\Hypertarget{classButton_aadf908b0777f2ae5c28d949fda3384c1}\label{classButton_aadf908b0777f2ae5c28d949fda3384c1}} 
+\index{Button@{Button}!text@{text}}
+\index{text@{text}!Button@{Button}}
+\subsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily sf\+::\+Text Button\+::text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+text of the button 
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+/home/pablo/\+Documentos/projetos/life\+\_\+game\+\_\+sfml/include/\hyperlink{button_8h}{button.\+h}\item 
+/home/pablo/\+Documentos/projetos/life\+\_\+game\+\_\+sfml/src/\hyperlink{button_8cpp}{button.\+cpp}\end{DoxyCompactItemize}

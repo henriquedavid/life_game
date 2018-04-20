@@ -1,0 +1,48 @@
+\hypertarget{button_8h}{}\section{Referência ao ficheiro /home/pablo/\+Documentos/projetos/life\+\_\+game\+\_\+sfml/include/button.h}
+\label{button_8h}\index{/home/pablo/\+Documentos/projetos/life\+\_\+game\+\_\+sfml/include/button.\+h@{/home/pablo/\+Documentos/projetos/life\+\_\+game\+\_\+sfml/include/button.\+h}}
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$S\+F\+M\+L/\+Graphics.\+hpp$>$}\newline
+Diagrama de dependências de inclusão para button.\+h\+:
+% FIG 0
+Este grafo mostra quais são os ficheiros que incluem directamente ou indirectamente este ficheiro\+:
+% FIG 1
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classButton}{Button}
+\begin{DoxyCompactList}\small\item\em A generic S\+F\+ML \hyperlink{classButton}{Button}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{button_8h_a40b271baa2a62e00c1925f51d7698146}{B\+T\+\_\+\+S\+T\+A\+TE} \{ \hyperlink{button_8h_a40b271baa2a62e00c1925f51d7698146ace12ce3ce09c52f7987f15934100d49c}{B\+T\+\_\+\+E\+N\+A\+B\+LE}, 
+\hyperlink{button_8h_a40b271baa2a62e00c1925f51d7698146afa9b2d34b068b5c820a8d597ab310827}{B\+T\+\_\+\+H\+O\+V\+ER}, 
+\hyperlink{button_8h_a40b271baa2a62e00c1925f51d7698146a3a43167f06c8bff6b7ecf7378b2890a8}{B\+T\+\_\+\+D\+I\+S\+A\+B\+LE}
+ \}\begin{DoxyCompactList}\small\item\em state of the button \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentação dos valores da enumeração}
+\mbox{\Hypertarget{button_8h_a40b271baa2a62e00c1925f51d7698146}\label{button_8h_a40b271baa2a62e00c1925f51d7698146}} 
+\index{button.\+h@{button.\+h}!B\+T\+\_\+\+S\+T\+A\+TE@{B\+T\+\_\+\+S\+T\+A\+TE}}
+\index{B\+T\+\_\+\+S\+T\+A\+TE@{B\+T\+\_\+\+S\+T\+A\+TE}!button.\+h@{button.\+h}}
+\subsubsection{\texorpdfstring{B\+T\+\_\+\+S\+T\+A\+TE}{BT\_STATE}}
+{\footnotesize\ttfamily enum \hyperlink{button_8h_a40b271baa2a62e00c1925f51d7698146}{B\+T\+\_\+\+S\+T\+A\+TE}}
+
+
+
+state of the button 
+
+\begin{DoxyEnumFields}{Valores de enumerações}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+T\+\_\+\+E\+N\+A\+B\+LE@{B\+T\+\_\+\+E\+N\+A\+B\+LE}!button.\+h@{button.\+h}}\index{button.\+h@{button.\+h}!B\+T\+\_\+\+E\+N\+A\+B\+LE@{B\+T\+\_\+\+E\+N\+A\+B\+LE}}}\mbox{\Hypertarget{button_8h_a40b271baa2a62e00c1925f51d7698146ace12ce3ce09c52f7987f15934100d49c}\label{button_8h_a40b271baa2a62e00c1925f51d7698146ace12ce3ce09c52f7987f15934100d49c}} 
+B\+T\+\_\+\+E\+N\+A\+B\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+T\+\_\+\+H\+O\+V\+ER@{B\+T\+\_\+\+H\+O\+V\+ER}!button.\+h@{button.\+h}}\index{button.\+h@{button.\+h}!B\+T\+\_\+\+H\+O\+V\+ER@{B\+T\+\_\+\+H\+O\+V\+ER}}}\mbox{\Hypertarget{button_8h_a40b271baa2a62e00c1925f51d7698146afa9b2d34b068b5c820a8d597ab310827}\label{button_8h_a40b271baa2a62e00c1925f51d7698146afa9b2d34b068b5c820a8d597ab310827}} 
+B\+T\+\_\+\+H\+O\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+T\+\_\+\+D\+I\+S\+A\+B\+LE@{B\+T\+\_\+\+D\+I\+S\+A\+B\+LE}!button.\+h@{button.\+h}}\index{button.\+h@{button.\+h}!B\+T\+\_\+\+D\+I\+S\+A\+B\+LE@{B\+T\+\_\+\+D\+I\+S\+A\+B\+LE}}}\mbox{\Hypertarget{button_8h_a40b271baa2a62e00c1925f51d7698146a3a43167f06c8bff6b7ecf7378b2890a8}\label{button_8h_a40b271baa2a62e00c1925f51d7698146a3a43167f06c8bff6b7ecf7378b2890a8}} 
+B\+T\+\_\+\+D\+I\+S\+A\+B\+LE&\\
+\hline
+
+\end{DoxyEnumFields}

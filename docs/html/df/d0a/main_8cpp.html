@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Conway&#39;s Life Game Simulator: Referência ao ficheiro /home/pablo/Documentos/projetos/life_game_sfml/src/main.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Conway&#39;s Life Game Simulator
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Simulador do Jogo da Vida de Conway</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Localizar');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a> &#124;
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência ao ficheiro main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;SFML/Graphics.hpp&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d44/life_8h_source.html">life.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d7/d0e/button_8h_source.html">button.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/dce/main_8cpp__incl.png" border="0" usemap="#_2home_2pablo_2Documentos_2projetos_2life__game__sfml_2src_2main_8cpp" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a8d7d10670b068d9043154c0731b126d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a8d7d10670b068d9043154c0731b126d4">clear_board</a> ()</td></tr>
+<tr class="memdesc:a8d7d10670b068d9043154c0731b126d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genetation count text.  <a href="#a8d7d10670b068d9043154c0731b126d4">Mais...</a><br /></td></tr>
+<tr class="separator:a8d7d10670b068d9043154c0731b126d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0db5241406c25c27e4a153b3953cd56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#ae0db5241406c25c27e4a153b3953cd56">reset_board</a> ()</td></tr>
+<tr class="separator:ae0db5241406c25c27e4a153b3953cd56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c54df7ed3b930268c8d7752c101725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#ac5c54df7ed3b930268c8d7752c101725">update</a> ()</td></tr>
+<tr class="separator:ac5c54df7ed3b930268c8d7752c101725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60de64d75454385b23995437f1d72669"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a60de64d75454385b23995437f1d72669">start</a> ()</td></tr>
+<tr class="separator:a60de64d75454385b23995437f1d72669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c528baf37154d347366083f0f816846"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a8c528baf37154d347366083f0f816846">stop</a> ()</td></tr>
+<tr class="memdesc:a8c528baf37154d347366083f0f816846"><td class="mdescLeft">&#160;</td><td class="mdescRight">return to the initial state  <a href="#a8c528baf37154d347366083f0f816846">Mais...</a><br /></td></tr>
+<tr class="separator:a8c528baf37154d347366083f0f816846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">driver function  <a href="#a0ddf1224851353fc92bfbff6f499fa97">Mais...</a><br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:a27f9f462c1a9e4cbebf5aa5fc7cef710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d57/classLife.html">Life</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a27f9f462c1a9e4cbebf5aa5fc7cef710">game</a></td></tr>
+<tr class="separator:a27f9f462c1a9e4cbebf5aa5fc7cef710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1347f132b1e1f49954e3948caea00b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#ae1347f132b1e1f49954e3948caea00b4">gen</a> = 0</td></tr>
+<tr class="memdesc:ae1347f132b1e1f49954e3948caea00b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">global game instance.  <a href="#ae1347f132b1e1f49954e3948caea00b4">Mais...</a><br /></td></tr>
+<tr class="separator:ae1347f132b1e1f49954e3948caea00b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d372f7ea1f537bfbc73492e24ef8623"><td class="memItemLeft" align="right" valign="top">sf::Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a6d372f7ea1f537bfbc73492e24ef8623">text</a></td></tr>
+<tr class="memdesc:a6d372f7ea1f537bfbc73492e24ef8623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genetation count.  <a href="#a6d372f7ea1f537bfbc73492e24ef8623">Mais...</a><br /></td></tr>
+<tr class="separator:a6d372f7ea1f537bfbc73492e24ef8623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="a8d7d10670b068d9043154c0731b126d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d7d10670b068d9043154c0731b126d4">&#9670;&nbsp;</a></span>clear_board()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear_board </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Genetation count text. </p>
+<p>Actions for <a class="el" href="../../d1/d19/classButton.html" title="A generic SFML Button. ">Button</a> pressed event </p>
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>driver function </p>
+<p>check command syntax</p>
+<p>check is the size was passed cainstead a file</p>
+<p>load config into scope variables</p>
+<p>reposition the buttons if necessary.</p>
+<p>main window draw loop</p>
+<p>event prossessing</p>
+<p>check if button close was pressed</p>
+<p>pass the event to the window elements</p>
+<p>show all elements in the window </p>
+
+</div>
+</div>
+<a id="ae0db5241406c25c27e4a153b3953cd56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0db5241406c25c27e4a153b3953cd56">&#9670;&nbsp;</a></span>reset_board()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reset_board </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60de64d75454385b23995437f1d72669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60de64d75454385b23995437f1d72669">&#9670;&nbsp;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>set function reference</p>
+<p>if the board os desable, the thread is already runnig.</p>
+<p>inicialize the update thread</p>
+<p>wait interval</p>
+<p>call update function</p>
+<p>count and print genaration </p>
+
+</div>
+</div>
+<a id="a8c528baf37154d347366083f0f816846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c528baf37154d347366083f0f816846">&#9670;&nbsp;</a></span>stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>return to the initial state </p>
+
+</div>
+</div>
+<a id="ac5c54df7ed3b930268c8d7752c101725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5c54df7ed3b930268c8d7752c101725">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das variáveis</h2>
+<a id="a27f9f462c1a9e4cbebf5aa5fc7cef710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27f9f462c1a9e4cbebf5aa5fc7cef710">&#9670;&nbsp;</a></span>game</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d57/classLife.html">Life</a>* game</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1347f132b1e1f49954e3948caea00b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1347f132b1e1f49954e3948caea00b4">&#9670;&nbsp;</a></span>gen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gen = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>global game instance. </p>
+
+</div>
+</div>
+<a id="a6d372f7ea1f537bfbc73492e24ef8623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d372f7ea1f537bfbc73492e24ef8623">&#9670;&nbsp;</a></span>text</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Text text</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Genetation count. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

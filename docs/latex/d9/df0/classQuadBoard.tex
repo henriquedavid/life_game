@@ -1,0 +1,315 @@
+\hypertarget{classQuadBoard}{}\section{Referência à classe Quad\+Board}
+\label{classQuadBoard}\index{Quad\+Board@{Quad\+Board}}
+
+
+{\ttfamily \#include $<$quadboard.\+h$>$}
+
+
+
+Diagrama de heranças da classe Quad\+Board
+% FIG 0
+
+
+Diagrama de colaboração para Quad\+Board\+:
+% FIG 1
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQuadBoard_aaf660c18a1bf1e41ba592a57ff26b69b}{Quad\+Board} (size\+\_\+t \hyperlink{classQuadBoard_ad07dae11e342f91f28b562441392523b}{quad\+\_\+size}, size\+\_\+t \hyperlink{classQuadBoard_a2e816c0a22fdaaf5efe57d4f05927f15}{width}, size\+\_\+t \hyperlink{classQuadBoard_a6db254c6e18450c8360ae6e7812a45c1}{height}, size\+\_\+t \hyperlink{classQuadBoard_a16bb409d20f76da6821f061792e87cae}{margin}, sf\+::\+Color \hyperlink{classQuadBoard_accb4dd5701108279703e9835cb777e8c}{default\+\_\+color}=sf\+::\+Color\+::\+Green, sf\+::\+Color \hyperlink{classQuadBoard_ad89b47afa74de80a44b9c4b71636203a}{active\+\_\+color}=sf\+::\+Color\+::\+Yellow)
+\item 
+void \hyperlink{classQuadBoard_a4d81d21ac5d21c457dd416ab83b84a20}{set\+\_\+quad\+\_\+color} (unsigned int x, unsigned int y, sf\+::\+Color color)
+\item 
+void \hyperlink{classQuadBoard_a47799adc84ee9172ce58e6aff826896e}{set\+\_\+active} (int x, int y)
+\item 
+void \hyperlink{classQuadBoard_a717f22cb86159b20b9cbfcf83b230d51}{set\+\_\+default} (int x, int y)
+\item 
+void \hyperlink{classQuadBoard_a66fade767417acd4d84532e108bccd09}{update} (sf\+::\+Event \&e)
+\begin{DoxyCompactList}\small\item\em update board \end{DoxyCompactList}\item 
+void \hyperlink{classQuadBoard_af675581ac14af027e148683150069e17}{clear} ()
+\begin{DoxyCompactList}\small\item\em clear board \end{DoxyCompactList}\item 
+void \hyperlink{classQuadBoard_a06118c0b36ac779243109674e2b067f7}{reset} ()
+\begin{DoxyCompactList}\small\item\em set board to initial state \end{DoxyCompactList}\item 
+void \hyperlink{classQuadBoard_a0fc9b6ffdaaeba3c71e484c0f8ece0b1}{backup} ()
+\begin{DoxyCompactList}\small\item\em save actual board state \end{DoxyCompactList}\item 
+bool \hyperlink{classQuadBoard_ab1d424a6388392ea3eb30cdfedb523c1}{get\+\_\+active} (int x, int y)
+\item 
+size\+\_\+t \hyperlink{classQuadBoard_a5d707ba2eb22707cd295117276b0bf9e}{get\+\_\+quad\+\_\+size} ()
+\begin{DoxyCompactList}\small\item\em get size in pixels of each quad \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classQuadBoard_abba94e5dec0897d1c17b6ffae8d2b001}{get\+\_\+margin} ()
+\begin{DoxyCompactList}\small\item\em get space in pixels between quads \end{DoxyCompactList}\item 
+void \hyperlink{classQuadBoard_aaa5d7e08e743372676a74d26e0806506}{disable} ()
+\begin{DoxyCompactList}\small\item\em dont update board \end{DoxyCompactList}\item 
+void \hyperlink{classQuadBoard_aa35b8ed541a1e56bd720bce2d73c5211}{enable} ()
+\begin{DoxyCompactList}\small\item\em enable board \end{DoxyCompactList}\item 
+bool \hyperlink{classQuadBoard_a3017a3c075ef268c369b27c3a0175479}{is\+\_\+disable} ()
+\begin{DoxyCompactList}\small\item\em check id the board is disable \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classQuadBoard_a40468c9832e6bbbdf3231fddc60a8521}{draw} (sf\+::\+Render\+Target \&target, sf\+::\+Render\+States states) const
+\begin{DoxyCompactList}\small\item\em draw methode, check S\+F\+ML docs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \hyperlink{classQuadBoard_ad07dae11e342f91f28b562441392523b}{quad\+\_\+size}
+\item 
+size\+\_\+t \hyperlink{classQuadBoard_a16bb409d20f76da6821f061792e87cae}{margin}
+\item 
+size\+\_\+t \hyperlink{classQuadBoard_a2e816c0a22fdaaf5efe57d4f05927f15}{width}
+\item 
+size\+\_\+t \hyperlink{classQuadBoard_a6db254c6e18450c8360ae6e7812a45c1}{height}
+\item 
+bool \hyperlink{classQuadBoard_acec3b891c0bb3744ed92e3c53ad95e17}{is\+\_\+enable}
+\item 
+sf\+::\+Color \hyperlink{classQuadBoard_ad89b47afa74de80a44b9c4b71636203a}{active\+\_\+color}
+\item 
+sf\+::\+Color \hyperlink{classQuadBoard_accb4dd5701108279703e9835cb777e8c}{default\+\_\+color}
+\item 
+sf\+::\+Vertex\+Array \hyperlink{classQuadBoard_af97c7c0427f288301f6c6a5a8f6059d3}{m\+\_\+vertices}
+\item 
+sf\+::\+Vertex\+Array \hyperlink{classQuadBoard_a40e514c6731698f7914a8ae02f89e61f}{m\+\_\+o\+\_\+vertices}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classQuadBoard_aaf660c18a1bf1e41ba592a57ff26b69b}\label{classQuadBoard_aaf660c18a1bf1e41ba592a57ff26b69b}} 
+\index{Quad\+Board@{Quad\+Board}!Quad\+Board@{Quad\+Board}}
+\index{Quad\+Board@{Quad\+Board}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{Quad\+Board()}{QuadBoard()}}
+{\footnotesize\ttfamily Quad\+Board\+::\+Quad\+Board (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{quad\+\_\+size,  }\item[{size\+\_\+t}]{width,  }\item[{size\+\_\+t}]{height,  }\item[{size\+\_\+t}]{margin,  }\item[{sf\+::\+Color}]{default\+\_\+color = {\ttfamily sf\+:\+:Color\+:\+:Green},  }\item[{sf\+::\+Color}]{active\+\_\+color = {\ttfamily sf\+:\+:Color\+:\+:Yellow} }\end{DoxyParamCaption})}
+
+\hyperlink{classQuadBoard}{Quad\+Board} constructor 
+\begin{DoxyParams}{Parâmetros}
+{\em quad\+\_\+size} & size in pixels of each quad of the board \\
+\hline
+{\em width} & width in number of cols of the board \\
+\hline
+{\em height} & height in number of rows of the board \\
+\hline
+{\em magin} & space in pixel between quad \\
+\hline
+{\em default\+\_\+color} & color that will be displayed when the quad is not activated \\
+\hline
+{\em activate} & color that will be displayed when the quad is activated \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classQuadBoard_a0fc9b6ffdaaeba3c71e484c0f8ece0b1}\label{classQuadBoard_a0fc9b6ffdaaeba3c71e484c0f8ece0b1}} 
+\index{Quad\+Board@{Quad\+Board}!backup@{backup}}
+\index{backup@{backup}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{backup()}{backup()}}
+{\footnotesize\ttfamily void Quad\+Board\+::backup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+save actual board state 
+
+\mbox{\Hypertarget{classQuadBoard_af675581ac14af027e148683150069e17}\label{classQuadBoard_af675581ac14af027e148683150069e17}} 
+\index{Quad\+Board@{Quad\+Board}!clear@{clear}}
+\index{clear@{clear}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Quad\+Board\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+clear board 
+
+\mbox{\Hypertarget{classQuadBoard_aaa5d7e08e743372676a74d26e0806506}\label{classQuadBoard_aaa5d7e08e743372676a74d26e0806506}} 
+\index{Quad\+Board@{Quad\+Board}!disable@{disable}}
+\index{disable@{disable}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily void Quad\+Board\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+dont update board 
+
+\mbox{\Hypertarget{classQuadBoard_a40468c9832e6bbbdf3231fddc60a8521}\label{classQuadBoard_a40468c9832e6bbbdf3231fddc60a8521}} 
+\index{Quad\+Board@{Quad\+Board}!draw@{draw}}
+\index{draw@{draw}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Quad\+Board\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target \&}]{target,  }\item[{sf\+::\+Render\+States}]{states }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+draw methode, check S\+F\+ML docs 
+
+\mbox{\Hypertarget{classQuadBoard_aa35b8ed541a1e56bd720bce2d73c5211}\label{classQuadBoard_aa35b8ed541a1e56bd720bce2d73c5211}} 
+\index{Quad\+Board@{Quad\+Board}!enable@{enable}}
+\index{enable@{enable}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void Quad\+Board\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+enable board 
+
+\mbox{\Hypertarget{classQuadBoard_ab1d424a6388392ea3eb30cdfedb523c1}\label{classQuadBoard_ab1d424a6388392ea3eb30cdfedb523c1}} 
+\index{Quad\+Board@{Quad\+Board}!get\+\_\+active@{get\+\_\+active}}
+\index{get\+\_\+active@{get\+\_\+active}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{get\+\_\+active()}{get\_active()}}
+{\footnotesize\ttfamily bool Quad\+Board\+::get\+\_\+active (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+get board element state 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & row of board \\
+\hline
+{\em y} & column of board \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQuadBoard_abba94e5dec0897d1c17b6ffae8d2b001}\label{classQuadBoard_abba94e5dec0897d1c17b6ffae8d2b001}} 
+\index{Quad\+Board@{Quad\+Board}!get\+\_\+margin@{get\+\_\+margin}}
+\index{get\+\_\+margin@{get\+\_\+margin}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{get\+\_\+margin()}{get\_margin()}}
+{\footnotesize\ttfamily size\+\_\+t Quad\+Board\+::get\+\_\+margin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get space in pixels between quads 
+
+\mbox{\Hypertarget{classQuadBoard_a5d707ba2eb22707cd295117276b0bf9e}\label{classQuadBoard_a5d707ba2eb22707cd295117276b0bf9e}} 
+\index{Quad\+Board@{Quad\+Board}!get\+\_\+quad\+\_\+size@{get\+\_\+quad\+\_\+size}}
+\index{get\+\_\+quad\+\_\+size@{get\+\_\+quad\+\_\+size}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{get\+\_\+quad\+\_\+size()}{get\_quad\_size()}}
+{\footnotesize\ttfamily size\+\_\+t Quad\+Board\+::get\+\_\+quad\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get size in pixels of each quad 
+
+\mbox{\Hypertarget{classQuadBoard_a3017a3c075ef268c369b27c3a0175479}\label{classQuadBoard_a3017a3c075ef268c369b27c3a0175479}} 
+\index{Quad\+Board@{Quad\+Board}!is\+\_\+disable@{is\+\_\+disable}}
+\index{is\+\_\+disable@{is\+\_\+disable}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{is\+\_\+disable()}{is\_disable()}}
+{\footnotesize\ttfamily bool Quad\+Board\+::is\+\_\+disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+check id the board is disable 
+
+\mbox{\Hypertarget{classQuadBoard_a06118c0b36ac779243109674e2b067f7}\label{classQuadBoard_a06118c0b36ac779243109674e2b067f7}} 
+\index{Quad\+Board@{Quad\+Board}!reset@{reset}}
+\index{reset@{reset}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Quad\+Board\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+set board to initial state 
+
+\mbox{\Hypertarget{classQuadBoard_a47799adc84ee9172ce58e6aff826896e}\label{classQuadBoard_a47799adc84ee9172ce58e6aff826896e}} 
+\index{Quad\+Board@{Quad\+Board}!set\+\_\+active@{set\+\_\+active}}
+\index{set\+\_\+active@{set\+\_\+active}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{set\+\_\+active()}{set\_active()}}
+{\footnotesize\ttfamily void Quad\+Board\+::set\+\_\+active (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+change quad state to activated 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & row of board \\
+\hline
+{\em y} & column of board \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQuadBoard_a717f22cb86159b20b9cbfcf83b230d51}\label{classQuadBoard_a717f22cb86159b20b9cbfcf83b230d51}} 
+\index{Quad\+Board@{Quad\+Board}!set\+\_\+default@{set\+\_\+default}}
+\index{set\+\_\+default@{set\+\_\+default}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{set\+\_\+default()}{set\_default()}}
+{\footnotesize\ttfamily void Quad\+Board\+::set\+\_\+default (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+change quad state to deactivated 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & row of board \\
+\hline
+{\em y} & column of board \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQuadBoard_a4d81d21ac5d21c457dd416ab83b84a20}\label{classQuadBoard_a4d81d21ac5d21c457dd416ab83b84a20}} 
+\index{Quad\+Board@{Quad\+Board}!set\+\_\+quad\+\_\+color@{set\+\_\+quad\+\_\+color}}
+\index{set\+\_\+quad\+\_\+color@{set\+\_\+quad\+\_\+color}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{set\+\_\+quad\+\_\+color()}{set\_quad\_color()}}
+{\footnotesize\ttfamily void Quad\+Board\+::set\+\_\+quad\+\_\+color (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{sf\+::\+Color}]{color }\end{DoxyParamCaption})}
+
+change quad color 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & row of board \\
+\hline
+{\em y} & column of board \\
+\hline
+{\em color} & new color \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classQuadBoard_a66fade767417acd4d84532e108bccd09}\label{classQuadBoard_a66fade767417acd4d84532e108bccd09}} 
+\index{Quad\+Board@{Quad\+Board}!update@{update}}
+\index{update@{update}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Quad\+Board\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{e }\end{DoxyParamCaption})}
+
+
+
+update board 
+
+
+
+\subsection{Documentação dos dados membro}
+\mbox{\Hypertarget{classQuadBoard_ad89b47afa74de80a44b9c4b71636203a}\label{classQuadBoard_ad89b47afa74de80a44b9c4b71636203a}} 
+\index{Quad\+Board@{Quad\+Board}!active\+\_\+color@{active\+\_\+color}}
+\index{active\+\_\+color@{active\+\_\+color}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{active\+\_\+color}{active\_color}}
+{\footnotesize\ttfamily sf\+::\+Color Quad\+Board\+::active\+\_\+color\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classQuadBoard_accb4dd5701108279703e9835cb777e8c}\label{classQuadBoard_accb4dd5701108279703e9835cb777e8c}} 
+\index{Quad\+Board@{Quad\+Board}!default\+\_\+color@{default\+\_\+color}}
+\index{default\+\_\+color@{default\+\_\+color}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{default\+\_\+color}{default\_color}}
+{\footnotesize\ttfamily sf\+::\+Color Quad\+Board\+::default\+\_\+color\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classQuadBoard_a6db254c6e18450c8360ae6e7812a45c1}\label{classQuadBoard_a6db254c6e18450c8360ae6e7812a45c1}} 
+\index{Quad\+Board@{Quad\+Board}!height@{height}}
+\index{height@{height}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily size\+\_\+t Quad\+Board\+::height\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classQuadBoard_acec3b891c0bb3744ed92e3c53ad95e17}\label{classQuadBoard_acec3b891c0bb3744ed92e3c53ad95e17}} 
+\index{Quad\+Board@{Quad\+Board}!is\+\_\+enable@{is\+\_\+enable}}
+\index{is\+\_\+enable@{is\+\_\+enable}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{is\+\_\+enable}{is\_enable}}
+{\footnotesize\ttfamily bool Quad\+Board\+::is\+\_\+enable\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classQuadBoard_a40e514c6731698f7914a8ae02f89e61f}\label{classQuadBoard_a40e514c6731698f7914a8ae02f89e61f}} 
+\index{Quad\+Board@{Quad\+Board}!m\+\_\+o\+\_\+vertices@{m\+\_\+o\+\_\+vertices}}
+\index{m\+\_\+o\+\_\+vertices@{m\+\_\+o\+\_\+vertices}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{m\+\_\+o\+\_\+vertices}{m\_o\_vertices}}
+{\footnotesize\ttfamily sf\+::\+Vertex\+Array Quad\+Board\+::m\+\_\+o\+\_\+vertices\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classQuadBoard_af97c7c0427f288301f6c6a5a8f6059d3}\label{classQuadBoard_af97c7c0427f288301f6c6a5a8f6059d3}} 
+\index{Quad\+Board@{Quad\+Board}!m\+\_\+vertices@{m\+\_\+vertices}}
+\index{m\+\_\+vertices@{m\+\_\+vertices}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{m\+\_\+vertices}{m\_vertices}}
+{\footnotesize\ttfamily sf\+::\+Vertex\+Array Quad\+Board\+::m\+\_\+vertices\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classQuadBoard_a16bb409d20f76da6821f061792e87cae}\label{classQuadBoard_a16bb409d20f76da6821f061792e87cae}} 
+\index{Quad\+Board@{Quad\+Board}!margin@{margin}}
+\index{margin@{margin}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{margin}{margin}}
+{\footnotesize\ttfamily size\+\_\+t Quad\+Board\+::margin\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classQuadBoard_ad07dae11e342f91f28b562441392523b}\label{classQuadBoard_ad07dae11e342f91f28b562441392523b}} 
+\index{Quad\+Board@{Quad\+Board}!quad\+\_\+size@{quad\+\_\+size}}
+\index{quad\+\_\+size@{quad\+\_\+size}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{quad\+\_\+size}{quad\_size}}
+{\footnotesize\ttfamily size\+\_\+t Quad\+Board\+::quad\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classQuadBoard_a2e816c0a22fdaaf5efe57d4f05927f15}\label{classQuadBoard_a2e816c0a22fdaaf5efe57d4f05927f15}} 
+\index{Quad\+Board@{Quad\+Board}!width@{width}}
+\index{width@{width}!Quad\+Board@{Quad\+Board}}
+\subsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily size\+\_\+t Quad\+Board\+::width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+/home/pablo/\+Documentos/projetos/life\+\_\+game\+\_\+sfml/include/\hyperlink{quadboard_8h}{quadboard.\+h}\item 
+/home/pablo/\+Documentos/projetos/life\+\_\+game\+\_\+sfml/src/\hyperlink{quadboard_8cpp}{quadboard.\+cpp}\end{DoxyCompactItemize}

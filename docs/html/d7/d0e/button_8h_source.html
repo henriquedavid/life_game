@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Conway&#39;s Life Game Simulator: Código-Fonte de /home/pablo/Documentos/projetos/life_game_sfml/include/button.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Conway&#39;s Life Game Simulator
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Simulador do Jogo da Vida de Conway</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Localizar');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">button.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/d0e/button_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef BUTTON_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define BUTTON_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146">    6</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146">BT_STATE</a></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146ace12ce3ce09c52f7987f15934100d49c">    8</a></span>&#160;    <a class="code" href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146ace12ce3ce09c52f7987f15934100d49c">BT_ENABLE</a>,</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146afa9b2d34b068b5c820a8d597ab310827">    9</a></span>&#160;    <a class="code" href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146afa9b2d34b068b5c820a8d597ab310827">BT_HOVER</a>,</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146a3a43167f06c8bff6b7ecf7378b2890a8">   10</a></span>&#160;    <a class="code" href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146a3a43167f06c8bff6b7ecf7378b2890a8">BT_DISABLE</a></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d1/d19/classButton.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d19/classButton.html">Button</a> : <span class="keyword">public</span> sf::Drawable, <span class="keyword">public</span> sf::Transformable</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="../../d1/d19/classButton.html#a3f6796e5e92c8a69a2288e01a8996078">Button</a>(std::string textstr, <span class="keyword">const</span> sf::Vector2f &amp;<a class="code" href="../../d1/d19/classButton.html#afd3823c96d76e1152fda9fc080f45b01">position</a>, <span class="keywordtype">size_t</span> height, <span class="keywordtype">void</span> (*<a class="code" href="../../d1/d19/classButton.html#ae9295b79451566476a9d2e563d0e7ce2">on_press</a>)(), sf::Color default_color = sf::Color(200, 200, 200));</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d1/d19/classButton.html#a1bc1735913f9fa01531f10c2a30f0202">getRightX</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d19/classButton.html#ab6b0888289d2b733a1e1066578aac900">move</a>(<span class="keywordtype">int</span> rx, <span class="keywordtype">int</span> ry);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d19/classButton.html#aaf2f85db7d93b19783f9e859ad58e185">update</a>(sf::Event&amp; e);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d1/d19/classButton.html#a13280eb9f2786fd2597fd3b9c9c5c858">draw</a>(sf::RenderTarget&amp; target, sf::RenderStates states) <span class="keyword">const</span>;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d19/classButton.html#af1464b95c6e43e125904b46670272ed2">press</a>();</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/d19/classButton.html#a1a5ca19ed8efe0ea27625217dcab9f2c">hover</a>();</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d1/d19/classButton.html#a8d1ded1e184e2495c36160c885574a1c">   41</a></span>&#160;    sf::RectangleShape <a class="code" href="../../d1/d19/classButton.html#a8d1ded1e184e2495c36160c885574a1c">rect</a>;</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d1/d19/classButton.html#afd3823c96d76e1152fda9fc080f45b01">   43</a></span>&#160;    sf::Vector2f <a class="code" href="../../d1/d19/classButton.html#afd3823c96d76e1152fda9fc080f45b01">position</a>;</div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d1/d19/classButton.html#ae2858ccb82273767d44ec2bc952dd07c">   45</a></span>&#160;    sf::Vector2f <a class="code" href="../../d1/d19/classButton.html#ae2858ccb82273767d44ec2bc952dd07c">size</a>;</div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d1/d19/classButton.html#ab6290d275363f4b0e133eec450845ca1">   47</a></span>&#160;    sf::Font <a class="code" href="../../d1/d19/classButton.html#ab6290d275363f4b0e133eec450845ca1">font</a>;</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d1/d19/classButton.html#aadf908b0777f2ae5c28d949fda3384c1">   49</a></span>&#160;    sf::Text <a class="code" href="../../d1/d19/classButton.html#aadf908b0777f2ae5c28d949fda3384c1">text</a>;</div><div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d1/d19/classButton.html#ae9295b79451566476a9d2e563d0e7ce2">   51</a></span>&#160;    void (*<a class="code" href="../../d1/d19/classButton.html#ae9295b79451566476a9d2e563d0e7ce2">on_press</a>)();</div><div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d1/d19/classButton.html#aa405a1238e29323bbdcf1c08f83d3f0f">   53</a></span>&#160;    <a class="code" href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146">BT_STATE</a> <a class="code" href="../../d1/d19/classButton.html#aa405a1238e29323bbdcf1c08f83d3f0f">state</a>;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classButton_html_a3f6796e5e92c8a69a2288e01a8996078"><div class="ttname"><a href="../../d1/d19/classButton.html#a3f6796e5e92c8a69a2288e01a8996078">Button::Button</a></div><div class="ttdeci">Button(std::string textstr, const sf::Vector2f &amp;position, size_t height, void(*on_press)(), sf::Color default_color=sf::Color(200, 200, 200))</div><div class="ttdef"><b>Definition:</b> button.cpp:10</div></div>
+<div class="ttc" id="classButton_html"><div class="ttname"><a href="../../d1/d19/classButton.html">Button</a></div><div class="ttdoc">A generic SFML Button. </div><div class="ttdef"><b>Definition:</b> button.h:13</div></div>
+<div class="ttc" id="classButton_html_afd3823c96d76e1152fda9fc080f45b01"><div class="ttname"><a href="../../d1/d19/classButton.html#afd3823c96d76e1152fda9fc080f45b01">Button::position</a></div><div class="ttdeci">sf::Vector2f position</div><div class="ttdoc">poosition vector </div><div class="ttdef"><b>Definition:</b> button.h:43</div></div>
+<div class="ttc" id="classButton_html_ab6290d275363f4b0e133eec450845ca1"><div class="ttname"><a href="../../d1/d19/classButton.html#ab6290d275363f4b0e133eec450845ca1">Button::font</a></div><div class="ttdeci">sf::Font font</div><div class="ttdoc">used font </div><div class="ttdef"><b>Definition:</b> button.h:47</div></div>
+<div class="ttc" id="button_8h_html_a40b271baa2a62e00c1925f51d7698146"><div class="ttname"><a href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146">BT_STATE</a></div><div class="ttdeci">BT_STATE</div><div class="ttdoc">state of the button </div><div class="ttdef"><b>Definition:</b> button.h:6</div></div>
+<div class="ttc" id="classButton_html_ab6b0888289d2b733a1e1066578aac900"><div class="ttname"><a href="../../d1/d19/classButton.html#ab6b0888289d2b733a1e1066578aac900">Button::move</a></div><div class="ttdeci">void move(int rx, int ry)</div><div class="ttdoc">relative move </div><div class="ttdef"><b>Definition:</b> button.cpp:93</div></div>
+<div class="ttc" id="classButton_html_ae2858ccb82273767d44ec2bc952dd07c"><div class="ttname"><a href="../../d1/d19/classButton.html#ae2858ccb82273767d44ec2bc952dd07c">Button::size</a></div><div class="ttdeci">sf::Vector2f size</div><div class="ttdoc">size vector </div><div class="ttdef"><b>Definition:</b> button.h:45</div></div>
+<div class="ttc" id="classButton_html_af1464b95c6e43e125904b46670272ed2"><div class="ttname"><a href="../../d1/d19/classButton.html#af1464b95c6e43e125904b46670272ed2">Button::press</a></div><div class="ttdeci">void press()</div><div class="ttdoc">press event </div><div class="ttdef"><b>Definition:</b> button.cpp:46</div></div>
+<div class="ttc" id="classButton_html_aa405a1238e29323bbdcf1c08f83d3f0f"><div class="ttname"><a href="../../d1/d19/classButton.html#aa405a1238e29323bbdcf1c08f83d3f0f">Button::state</a></div><div class="ttdeci">BT_STATE state</div><div class="ttdoc">state of the button </div><div class="ttdef"><b>Definition:</b> button.h:53</div></div>
+<div class="ttc" id="button_8h_html_a40b271baa2a62e00c1925f51d7698146afa9b2d34b068b5c820a8d597ab310827"><div class="ttname"><a href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146afa9b2d34b068b5c820a8d597ab310827">BT_HOVER</a></div><div class="ttdef"><b>Definition:</b> button.h:9</div></div>
+<div class="ttc" id="classButton_html_a8d1ded1e184e2495c36160c885574a1c"><div class="ttname"><a href="../../d1/d19/classButton.html#a8d1ded1e184e2495c36160c885574a1c">Button::rect</a></div><div class="ttdeci">sf::RectangleShape rect</div><div class="ttdoc">background rectangle </div><div class="ttdef"><b>Definition:</b> button.h:41</div></div>
+<div class="ttc" id="classButton_html_ae9295b79451566476a9d2e563d0e7ce2"><div class="ttname"><a href="../../d1/d19/classButton.html#ae9295b79451566476a9d2e563d0e7ce2">Button::on_press</a></div><div class="ttdeci">void(* on_press)()</div><div class="ttdoc">on_press action function </div><div class="ttdef"><b>Definition:</b> button.h:51</div></div>
+<div class="ttc" id="classButton_html_a1a5ca19ed8efe0ea27625217dcab9f2c"><div class="ttname"><a href="../../d1/d19/classButton.html#a1a5ca19ed8efe0ea27625217dcab9f2c">Button::hover</a></div><div class="ttdeci">void hover()</div><div class="ttdoc">hover event </div></div>
+<div class="ttc" id="classButton_html_a13280eb9f2786fd2597fd3b9c9c5c858"><div class="ttname"><a href="../../d1/d19/classButton.html#a13280eb9f2786fd2597fd3b9c9c5c858">Button::draw</a></div><div class="ttdeci">virtual void draw(sf::RenderTarget &amp;target, sf::RenderStates states) const</div><div class="ttdoc">draw methode of Button. Check the SFML Documentation </div><div class="ttdef"><b>Definition:</b> button.cpp:32</div></div>
+<div class="ttc" id="button_8h_html_a40b271baa2a62e00c1925f51d7698146ace12ce3ce09c52f7987f15934100d49c"><div class="ttname"><a href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146ace12ce3ce09c52f7987f15934100d49c">BT_ENABLE</a></div><div class="ttdef"><b>Definition:</b> button.h:8</div></div>
+<div class="ttc" id="classButton_html_aadf908b0777f2ae5c28d949fda3384c1"><div class="ttname"><a href="../../d1/d19/classButton.html#aadf908b0777f2ae5c28d949fda3384c1">Button::text</a></div><div class="ttdeci">sf::Text text</div><div class="ttdoc">text of the button </div><div class="ttdef"><b>Definition:</b> button.h:49</div></div>
+<div class="ttc" id="classButton_html_aaf2f85db7d93b19783f9e859ad58e185"><div class="ttname"><a href="../../d1/d19/classButton.html#aaf2f85db7d93b19783f9e859ad58e185">Button::update</a></div><div class="ttdeci">void update(sf::Event &amp;e)</div><div class="ttdoc">update state </div><div class="ttdef"><b>Definition:</b> button.cpp:52</div></div>
+<div class="ttc" id="button_8h_html_a40b271baa2a62e00c1925f51d7698146a3a43167f06c8bff6b7ecf7378b2890a8"><div class="ttname"><a href="../../d7/d0e/button_8h.html#a40b271baa2a62e00c1925f51d7698146a3a43167f06c8bff6b7ecf7378b2890a8">BT_DISABLE</a></div><div class="ttdef"><b>Definition:</b> button.h:10</div></div>
+<div class="ttc" id="classButton_html_a1bc1735913f9fa01531f10c2a30f0202"><div class="ttname"><a href="../../d1/d19/classButton.html#a1bc1735913f9fa01531f10c2a30f0202">Button::getRightX</a></div><div class="ttdeci">unsigned int getRightX()</div><div class="ttdoc">x_axis maximum of the button area </div><div class="ttdef"><b>Definition:</b> button.cpp:41</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

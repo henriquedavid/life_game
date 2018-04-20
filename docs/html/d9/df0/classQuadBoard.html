@@ -1,0 +1,827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Conway&#39;s Life Game Simulator: Referência à classe QuadBoard</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Conway&#39;s Life Game Simulator
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Simulador do Jogo da Vida de Conway</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Localizar');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-methods">Membros privados</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="../../d7/d98/classQuadBoard-members.html">Mostrar lista completa dos membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência à classe QuadBoard</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../df/df9/quadboard_8h_source.html">quadboard.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de heranças da classe QuadBoard</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d71/classQuadBoard__inherit__graph.png" border="0" usemap="#QuadBoard_inherit__map" alt="Inheritance graph"/></div>
+<!-- MAP 0 -->
+<center><span class="legend">[<a href="../../graph_legend.html">legenda</a>]</span></center></div>
+<div class="dynheader">
+Diagrama de colaboração para QuadBoard:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d40/classQuadBoard__coll__graph.png" border="0" usemap="#QuadBoard_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 1 -->
+<center><span class="legend">[<a href="../../graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr class="memitem:aaf660c18a1bf1e41ba592a57ff26b69b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#aaf660c18a1bf1e41ba592a57ff26b69b">QuadBoard</a> (size_t <a class="el" href="../../d9/df0/classQuadBoard.html#ad07dae11e342f91f28b562441392523b">quad_size</a>, size_t <a class="el" href="../../d9/df0/classQuadBoard.html#a2e816c0a22fdaaf5efe57d4f05927f15">width</a>, size_t <a class="el" href="../../d9/df0/classQuadBoard.html#a6db254c6e18450c8360ae6e7812a45c1">height</a>, size_t <a class="el" href="../../d9/df0/classQuadBoard.html#a16bb409d20f76da6821f061792e87cae">margin</a>, sf::Color <a class="el" href="../../d9/df0/classQuadBoard.html#accb4dd5701108279703e9835cb777e8c">default_color</a>=sf::Color::Green, sf::Color <a class="el" href="../../d9/df0/classQuadBoard.html#ad89b47afa74de80a44b9c4b71636203a">active_color</a>=sf::Color::Yellow)</td></tr>
+<tr class="separator:aaf660c18a1bf1e41ba592a57ff26b69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d81d21ac5d21c457dd416ab83b84a20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a4d81d21ac5d21c457dd416ab83b84a20">set_quad_color</a> (unsigned int x, unsigned int y, sf::Color color)</td></tr>
+<tr class="separator:a4d81d21ac5d21c457dd416ab83b84a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47799adc84ee9172ce58e6aff826896e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a47799adc84ee9172ce58e6aff826896e">set_active</a> (int x, int y)</td></tr>
+<tr class="separator:a47799adc84ee9172ce58e6aff826896e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717f22cb86159b20b9cbfcf83b230d51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a717f22cb86159b20b9cbfcf83b230d51">set_default</a> (int x, int y)</td></tr>
+<tr class="separator:a717f22cb86159b20b9cbfcf83b230d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66fade767417acd4d84532e108bccd09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a66fade767417acd4d84532e108bccd09">update</a> (sf::Event &amp;e)</td></tr>
+<tr class="memdesc:a66fade767417acd4d84532e108bccd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">update board  <a href="#a66fade767417acd4d84532e108bccd09">Mais...</a><br /></td></tr>
+<tr class="separator:a66fade767417acd4d84532e108bccd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af675581ac14af027e148683150069e17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#af675581ac14af027e148683150069e17">clear</a> ()</td></tr>
+<tr class="memdesc:af675581ac14af027e148683150069e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear board  <a href="#af675581ac14af027e148683150069e17">Mais...</a><br /></td></tr>
+<tr class="separator:af675581ac14af027e148683150069e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06118c0b36ac779243109674e2b067f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a06118c0b36ac779243109674e2b067f7">reset</a> ()</td></tr>
+<tr class="memdesc:a06118c0b36ac779243109674e2b067f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">set board to initial state  <a href="#a06118c0b36ac779243109674e2b067f7">Mais...</a><br /></td></tr>
+<tr class="separator:a06118c0b36ac779243109674e2b067f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc9b6ffdaaeba3c71e484c0f8ece0b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a0fc9b6ffdaaeba3c71e484c0f8ece0b1">backup</a> ()</td></tr>
+<tr class="memdesc:a0fc9b6ffdaaeba3c71e484c0f8ece0b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">save actual board state  <a href="#a0fc9b6ffdaaeba3c71e484c0f8ece0b1">Mais...</a><br /></td></tr>
+<tr class="separator:a0fc9b6ffdaaeba3c71e484c0f8ece0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1d424a6388392ea3eb30cdfedb523c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#ab1d424a6388392ea3eb30cdfedb523c1">get_active</a> (int x, int y)</td></tr>
+<tr class="separator:ab1d424a6388392ea3eb30cdfedb523c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d707ba2eb22707cd295117276b0bf9e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a5d707ba2eb22707cd295117276b0bf9e">get_quad_size</a> ()</td></tr>
+<tr class="memdesc:a5d707ba2eb22707cd295117276b0bf9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">get size in pixels of each quad  <a href="#a5d707ba2eb22707cd295117276b0bf9e">Mais...</a><br /></td></tr>
+<tr class="separator:a5d707ba2eb22707cd295117276b0bf9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba94e5dec0897d1c17b6ffae8d2b001"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#abba94e5dec0897d1c17b6ffae8d2b001">get_margin</a> ()</td></tr>
+<tr class="memdesc:abba94e5dec0897d1c17b6ffae8d2b001"><td class="mdescLeft">&#160;</td><td class="mdescRight">get space in pixels between quads  <a href="#abba94e5dec0897d1c17b6ffae8d2b001">Mais...</a><br /></td></tr>
+<tr class="separator:abba94e5dec0897d1c17b6ffae8d2b001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa5d7e08e743372676a74d26e0806506"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#aaa5d7e08e743372676a74d26e0806506">disable</a> ()</td></tr>
+<tr class="memdesc:aaa5d7e08e743372676a74d26e0806506"><td class="mdescLeft">&#160;</td><td class="mdescRight">dont update board  <a href="#aaa5d7e08e743372676a74d26e0806506">Mais...</a><br /></td></tr>
+<tr class="separator:aaa5d7e08e743372676a74d26e0806506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa35b8ed541a1e56bd720bce2d73c5211"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#aa35b8ed541a1e56bd720bce2d73c5211">enable</a> ()</td></tr>
+<tr class="memdesc:aa35b8ed541a1e56bd720bce2d73c5211"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable board  <a href="#aa35b8ed541a1e56bd720bce2d73c5211">Mais...</a><br /></td></tr>
+<tr class="separator:aa35b8ed541a1e56bd720bce2d73c5211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3017a3c075ef268c369b27c3a0175479"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a3017a3c075ef268c369b27c3a0175479">is_disable</a> ()</td></tr>
+<tr class="memdesc:a3017a3c075ef268c369b27c3a0175479"><td class="mdescLeft">&#160;</td><td class="mdescRight">check id the board is disable  <a href="#a3017a3c075ef268c369b27c3a0175479">Mais...</a><br /></td></tr>
+<tr class="separator:a3017a3c075ef268c369b27c3a0175479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Membros privados</h2></td></tr>
+<tr class="memitem:a40468c9832e6bbbdf3231fddc60a8521"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a40468c9832e6bbbdf3231fddc60a8521">draw</a> (sf::RenderTarget &amp;target, sf::RenderStates states) const</td></tr>
+<tr class="memdesc:a40468c9832e6bbbdf3231fddc60a8521"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw methode, check SFML docs  <a href="#a40468c9832e6bbbdf3231fddc60a8521">Mais...</a><br /></td></tr>
+<tr class="separator:a40468c9832e6bbbdf3231fddc60a8521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:ad07dae11e342f91f28b562441392523b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#ad07dae11e342f91f28b562441392523b">quad_size</a></td></tr>
+<tr class="separator:ad07dae11e342f91f28b562441392523b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16bb409d20f76da6821f061792e87cae"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a16bb409d20f76da6821f061792e87cae">margin</a></td></tr>
+<tr class="separator:a16bb409d20f76da6821f061792e87cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e816c0a22fdaaf5efe57d4f05927f15"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a2e816c0a22fdaaf5efe57d4f05927f15">width</a></td></tr>
+<tr class="separator:a2e816c0a22fdaaf5efe57d4f05927f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db254c6e18450c8360ae6e7812a45c1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a6db254c6e18450c8360ae6e7812a45c1">height</a></td></tr>
+<tr class="separator:a6db254c6e18450c8360ae6e7812a45c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec3b891c0bb3744ed92e3c53ad95e17"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#acec3b891c0bb3744ed92e3c53ad95e17">is_enable</a></td></tr>
+<tr class="separator:acec3b891c0bb3744ed92e3c53ad95e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad89b47afa74de80a44b9c4b71636203a"><td class="memItemLeft" align="right" valign="top">sf::Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#ad89b47afa74de80a44b9c4b71636203a">active_color</a></td></tr>
+<tr class="separator:ad89b47afa74de80a44b9c4b71636203a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accb4dd5701108279703e9835cb777e8c"><td class="memItemLeft" align="right" valign="top">sf::Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#accb4dd5701108279703e9835cb777e8c">default_color</a></td></tr>
+<tr class="separator:accb4dd5701108279703e9835cb777e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af97c7c0427f288301f6c6a5a8f6059d3"><td class="memItemLeft" align="right" valign="top">sf::VertexArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#af97c7c0427f288301f6c6a5a8f6059d3">m_vertices</a></td></tr>
+<tr class="separator:af97c7c0427f288301f6c6a5a8f6059d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e514c6731698f7914a8ae02f89e61f"><td class="memItemLeft" align="right" valign="top">sf::VertexArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df0/classQuadBoard.html#a40e514c6731698f7914a8ae02f89e61f">m_o_vertices</a></td></tr>
+<tr class="separator:a40e514c6731698f7914a8ae02f89e61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a id="aaf660c18a1bf1e41ba592a57ff26b69b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf660c18a1bf1e41ba592a57ff26b69b">&#9670;&nbsp;</a></span>QuadBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QuadBoard::QuadBoard </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>quad_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>margin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Color&#160;</td>
+          <td class="paramname"><em>default_color</em> = <code>sf::Color::Green</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Color&#160;</td>
+          <td class="paramname"><em>active_color</em> = <code>sf::Color::Yellow</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="../../d9/df0/classQuadBoard.html">QuadBoard</a> constructor </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">quad_size</td><td>size in pixels of each quad of the board </td></tr>
+    <tr><td class="paramname">width</td><td>width in number of cols of the board </td></tr>
+    <tr><td class="paramname">height</td><td>height in number of rows of the board </td></tr>
+    <tr><td class="paramname">magin</td><td>space in pixel between quad </td></tr>
+    <tr><td class="paramname">default_color</td><td>color that will be displayed when the quad is not activated </td></tr>
+    <tr><td class="paramname">activate</td><td>color that will be displayed when the quad is activated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos métodos</h2>
+<a id="a0fc9b6ffdaaeba3c71e484c0f8ece0b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc9b6ffdaaeba3c71e484c0f8ece0b1">&#9670;&nbsp;</a></span>backup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QuadBoard::backup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>save actual board state </p>
+
+</div>
+</div>
+<a id="af675581ac14af027e148683150069e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af675581ac14af027e148683150069e17">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QuadBoard::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>clear board </p>
+
+</div>
+</div>
+<a id="aaa5d7e08e743372676a74d26e0806506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa5d7e08e743372676a74d26e0806506">&#9670;&nbsp;</a></span>disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QuadBoard::disable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>dont update board </p>
+
+</div>
+</div>
+<a id="a40468c9832e6bbbdf3231fddc60a8521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40468c9832e6bbbdf3231fddc60a8521">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QuadBoard::draw </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderTarget &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::RenderStates&#160;</td>
+          <td class="paramname"><em>states</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>draw methode, check SFML docs </p>
+
+</div>
+</div>
+<a id="aa35b8ed541a1e56bd720bce2d73c5211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa35b8ed541a1e56bd720bce2d73c5211">&#9670;&nbsp;</a></span>enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QuadBoard::enable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>enable board </p>
+
+</div>
+</div>
+<a id="ab1d424a6388392ea3eb30cdfedb523c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1d424a6388392ea3eb30cdfedb523c1">&#9670;&nbsp;</a></span>get_active()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool QuadBoard::get_active </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>get board element state </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>row of board </td></tr>
+    <tr><td class="paramname">y</td><td>column of board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abba94e5dec0897d1c17b6ffae8d2b001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba94e5dec0897d1c17b6ffae8d2b001">&#9670;&nbsp;</a></span>get_margin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t QuadBoard::get_margin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get space in pixels between quads </p>
+
+</div>
+</div>
+<a id="a5d707ba2eb22707cd295117276b0bf9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d707ba2eb22707cd295117276b0bf9e">&#9670;&nbsp;</a></span>get_quad_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t QuadBoard::get_quad_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get size in pixels of each quad </p>
+
+</div>
+</div>
+<a id="a3017a3c075ef268c369b27c3a0175479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3017a3c075ef268c369b27c3a0175479">&#9670;&nbsp;</a></span>is_disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool QuadBoard::is_disable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>check id the board is disable </p>
+
+</div>
+</div>
+<a id="a06118c0b36ac779243109674e2b067f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06118c0b36ac779243109674e2b067f7">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QuadBoard::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set board to initial state </p>
+
+</div>
+</div>
+<a id="a47799adc84ee9172ce58e6aff826896e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47799adc84ee9172ce58e6aff826896e">&#9670;&nbsp;</a></span>set_active()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QuadBoard::set_active </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>change quad state to activated </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>row of board </td></tr>
+    <tr><td class="paramname">y</td><td>column of board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a717f22cb86159b20b9cbfcf83b230d51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717f22cb86159b20b9cbfcf83b230d51">&#9670;&nbsp;</a></span>set_default()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QuadBoard::set_default </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>change quad state to deactivated </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>row of board </td></tr>
+    <tr><td class="paramname">y</td><td>column of board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4d81d21ac5d21c457dd416ab83b84a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d81d21ac5d21c457dd416ab83b84a20">&#9670;&nbsp;</a></span>set_quad_color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QuadBoard::set_quad_color </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Color&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>change quad color </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>row of board </td></tr>
+    <tr><td class="paramname">y</td><td>column of board </td></tr>
+    <tr><td class="paramname">color</td><td>new color </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a66fade767417acd4d84532e108bccd09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66fade767417acd4d84532e108bccd09">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QuadBoard::update </td>
+          <td>(</td>
+          <td class="paramtype">sf::Event &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>update board </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos dados membro</h2>
+<a id="ad89b47afa74de80a44b9c4b71636203a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad89b47afa74de80a44b9c4b71636203a">&#9670;&nbsp;</a></span>active_color</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Color QuadBoard::active_color</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accb4dd5701108279703e9835cb777e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accb4dd5701108279703e9835cb777e8c">&#9670;&nbsp;</a></span>default_color</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Color QuadBoard::default_color</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6db254c6e18450c8360ae6e7812a45c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db254c6e18450c8360ae6e7812a45c1">&#9670;&nbsp;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t QuadBoard::height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acec3b891c0bb3744ed92e3c53ad95e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec3b891c0bb3744ed92e3c53ad95e17">&#9670;&nbsp;</a></span>is_enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool QuadBoard::is_enable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40e514c6731698f7914a8ae02f89e61f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40e514c6731698f7914a8ae02f89e61f">&#9670;&nbsp;</a></span>m_o_vertices</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::VertexArray QuadBoard::m_o_vertices</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af97c7c0427f288301f6c6a5a8f6059d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af97c7c0427f288301f6c6a5a8f6059d3">&#9670;&nbsp;</a></span>m_vertices</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::VertexArray QuadBoard::m_vertices</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16bb409d20f76da6821f061792e87cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16bb409d20f76da6821f061792e87cae">&#9670;&nbsp;</a></span>margin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t QuadBoard::margin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad07dae11e342f91f28b562441392523b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad07dae11e342f91f28b562441392523b">&#9670;&nbsp;</a></span>quad_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t QuadBoard::quad_size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e816c0a22fdaaf5efe57d4f05927f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e816c0a22fdaaf5efe57d4f05927f15">&#9670;&nbsp;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t QuadBoard::width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li>/home/pablo/Documentos/projetos/life_game_sfml/include/<a class="el" href="../../df/df9/quadboard_8h_source.html">quadboard.h</a></li>
+<li>/home/pablo/Documentos/projetos/life_game_sfml/src/<a class="el" href="../../dc/d1b/quadboard_8cpp.html">quadboard.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
